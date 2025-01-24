@@ -1,23 +1,33 @@
-<!doctype html>
+---
+import Navbar from '../components/Navbar.astro';
+---
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Davmar House</title>
-	<link rel="stylesheet" href="/src/styles/global.css" />
-</head>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QHnbBuD0+G9t1DBk6YaiKCB+TV06SmN6+9ocvYHgk+j2pLsqtkB7I2a45CUJk+If"
+      crossorigin="anonymous"
+    />
+
+    <!-- Global Stylesheet -->
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
   <body>
+    <Navbar />
     <slot />
+
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-NVV0cqdV0hAqtSgeXBZ1IVJ+I5dzr/lh8q0YBHTa/+kE9s5R4z2VVUcEqQl5lz9T"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
