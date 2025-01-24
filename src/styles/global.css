@@ -29,4 +29,16 @@ body {
     background-color: #FFFFFF; /* White icon for the toggle button */
   }
   
+  @media (max-width: 768px) {
+    .custom-navbar .navbar-brand img {
+      width: 60px; /* Adjust logo size for mobile */
+      height: 60px; /* Maintain aspect ratio */
+    }
+  }
+  
+  .custom-navbar .navbar-brand img:hover {
+    transform: scale(1.05); /* Slight zoom */
+    transition: transform 0.2s ease;
+  }
+  
   
