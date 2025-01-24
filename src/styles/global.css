@@ -8,4 +8,25 @@ body {
     --bs-primary: #12763e; /* Deep green */
   }
   
+  .custom-navbar {
+    background-color: #12763e; /* Dark green background */
+  }
+  
+  .custom-navbar .navbar-brand,
+  .custom-navbar .nav-link {
+    color: #FFFFFF !important; /* White text for brand and links */
+  }
+  
+  .custom-navbar .nav-link:hover {
+    color: #d8ad40 !important; /* Gold accent on hover */
+  }
+  
+  .custom-navbar .navbar-toggler {
+    border-color: #FFFFFF; /* White border for the toggle button */
+  }
+  
+  .custom-navbar .navbar-toggler-icon {
+    background-color: #FFFFFF; /* White icon for the toggle button */
+  }
+  
   
