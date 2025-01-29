@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "astro": "^5.1.9",
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "swiper": "^11.2.1"
   }
 }

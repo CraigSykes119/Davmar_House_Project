@@ -1,0 +1,18 @@
+.hero {
+    width: 100%;
+    height: 80vh; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
