@@ -1,0 +1,30 @@
+---
+import "../scripts/swiper_init.js"; // Import Swiper setup script
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "../css/hero.css";
+---
+
+<section class="hero">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/images/hero1.jpg" alt="Davmar House - Exterior View" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/hero2.jpg" alt="Cozy Bedroom at Davmar House" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/hero3.jpg" alt="Dining Area" />
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
