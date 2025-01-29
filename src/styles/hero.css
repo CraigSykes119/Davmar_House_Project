@@ -1,12 +1,15 @@
 .hero {
     width: 100%;
-    height: 80vh; /* Adjust as needed */
-    position: relative;
-    overflow: hidden;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #12763e; /* Background matching theme */
   }
   
   .swiper {
-    width: 100%;
+    width: 80%;
+    max-width: 1200px;
     height: 100%;
   }
   
@@ -14,5 +17,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff;
+  }
+  
+  .swiper-pagination {
+    color: #fff;
   }
   
