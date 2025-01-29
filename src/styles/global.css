@@ -48,6 +48,40 @@ body {
   transform: scale(1.05); /* Slight zoom effect */
 }
 
+.custom-navbar {
+  padding: 5px 0; /* Reduce padding */
+}
+
+.hero {
+width: 100%;
+height: 400px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #12763e; /* Background matching theme */
+}
+
+.swiper {
+width: 80%;
+max-width: 1200px;
+height: 100%;
+}
+
+.swiper-slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+color: #d8ad40;
+}
+
+.swiper-pagination {
+color: #d8ad40;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 992px) {
   .custom-navbar .navbar-brand img {
@@ -59,38 +93,4 @@ body {
   .custom-navbar .navbar-brand img {
     max-height: 50px; /* Further reduce logo size for smaller devices */
   }
-
-  .custom-navbar {
-    padding: 5px 0; /* Reduce padding */
-  }
-}
-
-.hero {
-  width: 100%;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #12763e; /* Background matching theme */
-}
-
-.swiper {
-  width: 80%;
-  max-width: 1200px;
-  height: 100%;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #d8ad40;
-}
-
-.swiper-pagination {
-  color: #d8ad40;
 }
