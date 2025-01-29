@@ -1,44 +1,66 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+:root {
+  --bs-primary: #12763e; /* Deep green */
+}
+
 body {
-    background-color: lightblue;
+  background-color: lightblue;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: var(--bs-primary) !important; /* Dark green background */
+  padding: 10px 0; /* Adds spacing */
+}
+
+/* Navbar Brand & Links */
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: white !important; /* Ensure white text */
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #d8ad40 !important; /* Gold accent on hover */
+}
+
+/* Navbar Toggler Button */
+.custom-navbar .navbar-toggler {
+  border: none; /* Remove default border */
+  outline: none; /* Prevent focus outline */
+}
+
+.custom-navbar .navbar-toggler-icon {
+  filter: invert(1); /* Ensures white icon on dark background */
+}
+
+/* Logo Styling */
+.custom-navbar .navbar-brand img {
+  max-height: 80px; /* Adjusted for better alignment */
+  width: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.custom-navbar .navbar-brand img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 992px) {
+  .custom-navbar .navbar-brand img {
+    max-height: 60px; /* Reduce logo size */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-navbar .navbar-brand img {
+    max-height: 50px; /* Further reduce logo size for smaller devices */
   }
 
-  :root {
-    --bs-primary: #12763e; /* Deep green */
-  }
-  
   .custom-navbar {
-    background-color: #12763e; /* Dark green background */
+    padding: 5px 0; /* Reduce padding */
   }
-  
-  .custom-navbar .navbar-brand,
-  .custom-navbar .nav-link {
-    color: #FFFFFF !important; /* White text for brand and links */
-  }
-  
-  .custom-navbar .nav-link:hover {
-    color: #d8ad40 !important; /* Gold accent on hover */
-  }
-  
-  .custom-navbar .navbar-toggler {
-    border-color: #FFFFFF; /* White border for the toggle button */
-  }
-  
-  .custom-navbar .navbar-toggler-icon {
-    background-color: #FFFFFF; /* White icon for the toggle button */
-  }
-  
-  @media (max-width: 768px) {
-    .custom-navbar .navbar-brand img {
-      width: 60px; /* Adjust logo size for mobile */
-      height: 60px; /* Maintain aspect ratio */
-    }
-  }
-  
-  .custom-navbar .navbar-brand img:hover {
-    transform: scale(1.05); /* Slight zoom */
-    transition: transform 0.2s ease;
-  }
-  
-  
+}
