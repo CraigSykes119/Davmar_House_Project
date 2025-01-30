@@ -1,0 +1,55 @@
+---
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-zoom.css";
+---
+
+<section class="gallery">
+  <div id="lightgallery">
+    <a href="/gallery_images/img1.jpg">
+      <img src="/gallery_images/img1.jpg" alt="Room Image 1" />
+    </a>
+    <a href="/gallery_images/img2.jpg">
+      <img src="/gallery_images/img2.jpg" alt="Room Image 2" />
+    </a>
+    <a href="/gallery_images/img3.jpg">
+      <img src="/gallery_images/img3.jpg" alt="Scenic View" />
+    </a>
+  </div>
+</section>
+
+<!-- Include the external script -->
+<script src="/scripts/lightgallery_init.js" defer></script>
+
+<style>
+  .gallery {
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  #lightgallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  #lightgallery a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  #lightgallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+
+  #lightgallery img:hover {
+    transform: scale(1.05);
+  }
+</style>
