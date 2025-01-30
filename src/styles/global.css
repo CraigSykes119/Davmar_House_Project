@@ -101,6 +101,48 @@ color: #d8ad40;
   line-height: 1.6;
 }
 
+/* Footer */
+.footer {
+  background-color: #12763e; /* Deep Green */
+  color: #ffffff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  justify-content: center;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-link:hover {
+  color: #d8ad40; /* Gold */
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  color: #d8ad40; /* Gold */
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
 
 /* Mobile Adjustments */
 @media (max-width: 992px) {
