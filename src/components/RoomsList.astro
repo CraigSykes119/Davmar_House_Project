@@ -1,0 +1,32 @@
+---
+import RoomCard from './RoomCard.astro';
+
+const rooms = [
+  {
+    title: "Standard Room",
+    price: "€90 per night",
+    imgSrc: "/room_images/Room_1.webp",
+    description: "A cozy standard room with modern amenities."
+  },
+  {
+    title: "Deluxe Room",
+    price: "€120 per night",
+    imgSrc: "/room_images/Room_2.webp",
+    description: "A spacious deluxe room with a scenic view."
+  },
+  {
+    title: "Suite",
+    price: "€150 per night",
+    imgSrc: "/room_images/Room_3.webp",
+    description: "Our most luxurious suite with premium features."
+  }
+];
+---
+
+<section class="rooms-list container">
+  <div class="row">
+    {rooms.map((room) => (
+      <RoomCard {...room} />
+    ))}
+  </div>
+</section>

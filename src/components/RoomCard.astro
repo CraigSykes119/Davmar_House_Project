@@ -1,0 +1,14 @@
+---
+const { title, price, imgSrc, description } = Astro.props;
+---
+
+<div class="col-md-4">
+  <div class="card room-card">
+    <img src={imgSrc} alt={title} class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{title}</h5>
+      <p class="card-text">{description}</p>
+      <p class="room-price">{price}</p>
+    </div>
+  </div>
+</div>

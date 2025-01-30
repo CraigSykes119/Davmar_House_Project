@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RoomsList from '../components/RoomsList.astro';
+---
+
+<Layout>
+  <section class="rooms-hero">
+    <h1>Rooms & Rates</h1>
+    <p>Comfortable and modern accommodation in the heart of Blarney.</p>
+  </section>
+
+  <!-- Facilities Section -->
+  <section class="facilities">
+    <h2>Our Facilities & Activities Available</h2>
+    
+    <div class="row">
+      <!-- Main Facilities Box -->
+      <div class="col-md-6">
+        <div class="facility-box">
+          <h3>Main Facilities</h3>
+          <ul>
+            <li>Baggage store</li>
+            <li>Picnic area</li>
+            <li>Free high-speed fibre broadband internet</li>
+            <li>Free WiFi internet</li>
+            <li>Common room with fridge, microwave, plates & cutlery</li>
+            <li>Free on-site parking</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Activities Box -->
+      <div class="col-md-6">
+        <div class="facility-box">
+          <h3>Nearby Activities & Experiences</h3>
+          <ul>
+            <li>Scenic walks</li>
+            <li>Bowling alley</li>
+            <li>Cycling</li>
+            <li>Fishing</li>
+            <li>Golf</li>
+            <li>Horse riding</li>
+            <li>Mountain biking</li>
+            <li>Shopping</li>
+            <li>Theatre</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <RoomsList />
+</Layout>
+
+<style>
+  .rooms-hero {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .rooms-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* Facilities Section */
+.facilities {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.facilities h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #12763e; /* Primary deep green */
+}
+
+.facility-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.facility-box h3 {
+  font-size: 1.5rem;
+  color: #12763e; /* Primary deep green */
+  margin-bottom: 1rem;
+}
+
+.facility-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.facility-box li {
+  font-size: 1rem;
+  padding: 5px 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .facility-box {
+    margin-bottom: 20px;
+  }
+}
+
+</style>
