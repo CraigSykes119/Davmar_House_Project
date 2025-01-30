@@ -1,7 +1,11 @@
 ---
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 ---
 
 <section class="hero">
@@ -27,5 +31,26 @@ import "swiper/css/pagination";
   </div>
 </section>
 
-<!-- Load Swiper JS in the browser -->
-<script src="/scripts/swiper_init.js" defer></script>
+<!-- Run Swiper on Client Side -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    import("swiper").then((Swiper) => {
+      import("swiper/modules").then((modules) => {
+        const { Navigation, Pagination } = modules;
+        new Swiper.default('.swiper', {
+          modules: [Navigation, Pagination],
+          direction: 'horizontal',
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      });
+    });
+  });
+</script>
