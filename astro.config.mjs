@@ -1,5 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://CraigSykes119.github.io/Davmar_House_Project/', // Your GitHub Pages URL
+  base: '/Davmar_House_Project/', // Your repository name
+  output: 'static', // Ensure Astro builds a static site
+});
