@@ -1,52 +1,31 @@
 ---
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-thumbnail.css";
-import "lightgallery/css/lg-zoom.css";
+import Layout from '../layouts/Layout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
 ---
 
-<section class="gallery">
-  <div id="lightgallery">
-    <a href="/gallery_images/img1.jpg">
-      <img src="/gallery_images/img1.jpg" alt="Room Image 1" />
-    </a>
-    <a href="/gallery_images/img2.jpg">
-      <img src="/gallery_images/img2.jpg" alt="Room Image 2" />
-    </a>
-    <a href="/gallery_images/img3.jpg">
-      <img src="/gallery_images/img3.jpg" alt="Scenic View" />
-    </a>
-  </div>
-</section>
+<Layout>
+  <section class="gallery-page">
+    <h1>Gallery</h1>
+    <p>Explore the beauty of Davmar House through our curated gallery.</p>
+    
+    <GalleryGrid />
+  </section>
+</Layout>
 
 <style>
-  .gallery {
+  .gallery-page {
     text-align: center;
     margin: 3rem 0;
   }
 
-  #lightgallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    justify-content: center;
-    padding: 20px;
+  .gallery-page h1 {
+    font-size: 2rem;
+    color: #12763e; /* Deep green for headings */
   }
 
-  #lightgallery a {
-    display: block;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  #lightgallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-  }
-
-  #lightgallery img:hover {
-    transform: scale(1.05);
+  .gallery-page p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
   }
 </style>
