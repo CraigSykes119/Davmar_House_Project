@@ -24,9 +24,17 @@ const rooms = [
 ---
 
 <section class="rooms-list container">
-  <div class="row">
+  <div class="row justify-content-center">
     {rooms.map((room) => (
-      <RoomCard {...room} />
+      <div class="col-md-4 d-flex">
+        <RoomCard {...room} />
+      </div>
     ))}
   </div>
 </section>
+
+<style>
+  .rooms-list {
+    margin-bottom: 4rem; /* Adds spacing below to push footer down */
+  }
+</style>
