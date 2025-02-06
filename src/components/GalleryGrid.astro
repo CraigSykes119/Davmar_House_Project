@@ -5,41 +5,117 @@ import "lightgallery/css/lg-zoom.css";
 ---
 
 <section class="gallery">
-  <div id="lightgallery">
-    <a href="/gallery_images/img1.jpg">
-      <img src="/gallery_images/img1.jpg" alt="Room Image 1" />
-    </a>
-    <a href="/gallery_images/img2.jpg">
-      <img src="/gallery_images/img2.jpg" alt="Room Image 2" />
-    </a>
-    <a href="/gallery_images/img3.jpg">
-      <img src="/gallery_images/img3.jpg" alt="Scenic View" />
-    </a>
+  <h2>Gallery</h2>
+
+  <!-- Standard Room Section -->
+  <div class="gallery-section">
+    <h3>Standard Room</h3>
+    <div id="lightgallery-standard" class="lightgallery">
+      <a href="/gallery_images/StandardRoom1.jpg">
+        <img src="/gallery_images/StandardRoom1.jpg" alt="Standard Room 1" />
+      </a>
+      <a href="/gallery_images/StandardRoom2.jpg">
+        <img src="/gallery_images/StandardRoom2.jpg" alt="Standard Room 2" />
+      </a>
+      <a href="/gallery_images/StandardRoom3.jpg">
+        <img src="/gallery_images/StandardRoom3.jpg" alt="Standard Room 3" />
+      </a>
+      <a href="/gallery_images/StandardRoom4.jpg">
+        <img src="/gallery_images/StandardRoom4.jpg" alt="Standard Room 4" />
+      </a>
+      <a href="/gallery_images/StandardRoom5.jpg">
+        <img src="/gallery_images/StandardRoom5.jpg" alt="Standard Room 5" />
+      </a>
+      <a href="/gallery_images/StandardRoom6.jpg">
+        <img src="/gallery_images/StandardRoom6.jpg" alt="Standard Room 6" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Deluxe Room Section -->
+  <div class="gallery-section">
+    <h3>Deluxe Room</h3>
+    <div id="lightgallery-deluxe" class="lightgallery">
+      <a href="/gallery_images/DeluxeRoom1.jpg">
+        <img src="/gallery_images/DeluxeRoom1.jpg" alt="Deluxe Room 1" />
+      </a>
+      <a href="/gallery_images/DeluxeRoom2.jpg">
+        <img src="/gallery_images/DeluxeRoom2.jpg" alt="Deluxe Room 2" />
+      </a>
+      <a href="/gallery_images/DeluxeRoom3.jpg">
+        <img src="/gallery_images/DeluxeRoom3.jpg" alt="Deluxe Room 3" />
+      </a>
+      <a href="/gallery_images/DeluxeRoom4.jpg">
+        <img src="/gallery_images/DeluxeRoom4.jpg" alt="Deluxe Room 4" />
+      </a>
+      <a href="/gallery_images/DeluxeRoom5.jpg">
+        <img src="/gallery_images/DeluxeRoom5.jpg" alt="Deluxe Room 5" />
+      </a>
+      <a href="/gallery_images/DeluxeRoom6.jpg">
+        <img src="/gallery_images/DeluxeRoom6.jpg" alt="Deluxe Room 6" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Suite Room Section -->
+  <div class="gallery-section">
+    <h3>Suite Room</h3>
+    <div id="lightgallery-suite" class="lightgallery">
+      <a href="/gallery_images/SuiteRoom1.jpg">
+        <img src="/gallery_images/SuiteRoom1.jpg" alt="Suite Room 1" />
+      </a>
+      <a href="/gallery_images/SuiteRoom2.jpg">
+        <img src="/gallery_images/SuiteRoom2.jpg" alt="Suite Room 2" />
+      </a>
+      <a href="/gallery_images/SuiteRoom3.jpg">
+        <img src="/gallery_images/SuiteRoom3.jpg" alt="Suite Room 3" />
+      </a>
+      <a href="/gallery_images/SuiteRoom4.jpg">
+        <img src="/gallery_images/SuiteRoom4.jpg" alt="Suite Room 4" />
+      </a>
+      <a href="/gallery_images/SuiteRoom5.jpg">
+        <img src="/gallery_images/SuiteRoom5.jpg" alt="Suite Room 5" />
+      </a>
+      <a href="/gallery_images/SuiteRoom6.jpg">
+        <img src="/gallery_images/SuiteRoom6.jpg" alt="Suite Room 6" />
+      </a>
+      <a href="/gallery_images/SuiteRoom7.jpg">
+        <img src="/gallery_images/SuiteRoom7.jpg" alt="Suite Room 7" />
+      </a>
+      <a href="/gallery_images/SuiteRoom8.jpg">
+        <img src="/gallery_images/SuiteRoom8.jpg" alt="Suite Room 8" />
+      </a>
+      <a href="/gallery_images/SuiteRoom9.jpg">
+        <img src="/gallery_images/SuiteRoom9.jpg" alt="Suite Room 9" />
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- Initialize LightGallery using a script -->
+<!-- Initialize LightGallery -->
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      import("lightgallery").then((lg) => {
-        import("lightgallery/plugins/thumbnail").then((lgThumbnail) => {
-          import("lightgallery/plugins/zoom").then((lgZoom) => {
-            const galleryElement = document.getElementById("lightgallery");
-            if (galleryElement) {
-              lg.default(galleryElement, {
-                plugins: [lgThumbnail.default, lgZoom.default],
-                speed: 500,
-              });
-            } else {
-              console.error("LightGallery element not found.");
-            }
-          });
+  document.addEventListener("DOMContentLoaded", () => {
+    import("lightgallery").then((lg) => {
+      import("lightgallery/plugins/thumbnail").then((lgThumbnail) => {
+        import("lightgallery/plugins/zoom").then((lgZoom) => {
+          const standardGallery = document.getElementById("lightgallery-standard");
+          const deluxeGallery = document.getElementById("lightgallery-deluxe");
+          const suiteGallery = document.getElementById("lightgallery-suite");
+
+          if (standardGallery) {
+            lg.default(standardGallery, { plugins: [lgThumbnail.default, lgZoom.default], speed: 500 });
+          }
+          if (deluxeGallery) {
+            lg.default(deluxeGallery, { plugins: [lgThumbnail.default, lgZoom.default], speed: 500 });
+          }
+          if (suiteGallery) {
+            lg.default(suiteGallery, { plugins: [lgThumbnail.default, lgZoom.default], speed: 500 });
+          }
         });
       });
     });
-  </script>
-  
-  
+  });
+</script>
 
 <style>
   .gallery {
@@ -47,7 +123,15 @@ import "lightgallery/css/lg-zoom.css";
     margin: 3rem 0;
   }
 
-  #lightgallery {
+  .gallery-section {
+    margin-bottom: 3rem;
+  }
+
+  .gallery-section h3 {
+    color: #12763e;
+  }
+
+  .lightgallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
@@ -55,13 +139,13 @@ import "lightgallery/css/lg-zoom.css";
     padding: 20px;
   }
 
-  #lightgallery a {
+  .lightgallery a {
     display: block;
     border-radius: 8px;
     overflow: hidden;
   }
 
-  #lightgallery img {
+  .lightgallery img {
     width: 100%;
     height: auto;
     display: block;
@@ -69,7 +153,7 @@ import "lightgallery/css/lg-zoom.css";
     transition: transform 0.2s ease;
   }
 
-  #lightgallery img:hover {
+  .lightgallery img:hover {
     transform: scale(1.05);
   }
 </style>
