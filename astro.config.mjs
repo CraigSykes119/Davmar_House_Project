@@ -1,8 +1,5 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  server: {
-    port: 4321, // Adjust if necessary
-  },
-  integrations: [],
+  output: "server", // <-- This must be set for API routes to work
 });

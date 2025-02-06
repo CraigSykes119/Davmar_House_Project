@@ -1,19 +1,19 @@
-export const prerender = false; // Allows server-side API execution
-
 export async function POST({ request }) {
   try {
-    const data = await request.json(); // Parse JSON body
-    console.log("Form Submission:", data); // Log data to console
+      const formData = await request.json(); // Read submitted form data
 
-    return new Response(
-      JSON.stringify({ success: true, message: "Form submitted successfully!" }),
-      { status: 200 }
-    );
+      console.log("Received Form Data:", formData);
+
+      return new Response(
+          JSON.stringify({ success: true, message: "✅ Form submitted successfully!" }),
+          { status: 200, headers: { "Content-Type": "application/json" } }
+      );
   } catch (error) {
-    console.error("Error handling form:", error);
-    return new Response(
-      JSON.stringify({ success: false, message: "Server error" }),
-      { status: 500 }
-    );
+      console.error("❌ Form submission error:", error);
+
+      return new Response(
+          JSON.stringify({ success: false, message: "❌ Failed to submit the form." }),
+          { status: 500, headers: { "Content-Type": "application/json" } }
+      );
   }
 }
