@@ -1,4 +1,4 @@
-<form class="contact-form" id="contact-form">
+<form id="contact-form" class="contact-form">
     <div class="form-group">
       <label for="name">Name*</label>
       <input type="text" id="name" name="name" required />
@@ -48,33 +48,35 @@
       }
   
       contactForm.addEventListener("submit", async function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default form submission
   
         const formData = new FormData(contactForm);
   
         try {
           const response = await fetch("/api/contact", {
             method: "POST",
-            body: formData,
+            headers: {
+              "Content-Type": "application/json", // Ensure JSON format
+            },
+            body: JSON.stringify(Object.fromEntries(formData)),
           });
   
           const result = await response.json();
+  
+          responseMessage.style.display = "block";
+          responseMessage.style.color = result.success ? "green" : "red";
+          responseMessage.textContent = result.success ? "✅ Message received!" : "❌ Error submitting form.";
+  
           if (result.success) {
-            responseMessage.style.display = "block";
-            responseMessage.style.color = "green";
-            responseMessage.textContent = "✅ Message sent successfully!";
             contactForm.reset(); // ✅ No more TypeScript errors!
-          } else {
-            throw new Error(result.message);
           }
         } catch (error) {
           responseMessage.style.display = "block";
           responseMessage.style.color = "red";
-          responseMessage.textContent = "❌ Failed to send message. Try again later.";
+          responseMessage.textContent = "❌ Failed to submit. Try again later.";
         }
       });
     });
   </script>
-  
   
   
