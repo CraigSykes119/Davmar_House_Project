@@ -29,34 +29,44 @@
     <p id="response-message" style="display: none;"></p>
   </form>
   
-  <!-- Handle Form Submission via JavaScript -->
-  <script>
-    document.getElementById("contact-form").addEventListener("submit", async function (event) {
-      event.preventDefault();
-  
-      const formData = new FormData(this);
+  <!-- JavaScript for Form Handling -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const contactForm = document.getElementById("contact-form");
       const responseMessage = document.getElementById("response-message");
   
-      try {
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          body: formData,
-        });
-  
-        const result = await response.json();
-        if (result.success) {
-          responseMessage.style.display = "block";
-          responseMessage.style.color = "green";
-          responseMessage.textContent = "✅ Message sent successfully!";
-          this.reset();
-        } else {
-          throw new Error(result.message);
-        }
-      } catch (error) {
-        responseMessage.style.display = "block";
-        responseMessage.style.color = "red";
-        responseMessage.textContent = "❌ Failed to send message. Try again later.";
+      if (!contactForm || !responseMessage) {
+        console.error("Form or response message element not found.");
+        return;
       }
+  
+      contactForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+  
+        const formData = new FormData(contactForm);
+  
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            body: formData,
+          });
+  
+          const result = await response.json();
+          if (result.success) {
+            responseMessage.style.display = "block";
+            responseMessage.style.color = "green";
+            responseMessage.textContent = "✅ Message sent successfully!";
+            contactForm.reset();
+          } else {
+            throw new Error(result.message);
+          }
+        } catch (error) {
+          responseMessage.style.display = "block";
+          responseMessage.style.color = "red";
+          responseMessage.textContent = "❌ Failed to send message. Try again later.";
+        }
+      });
     });
   </script>
+  
   
