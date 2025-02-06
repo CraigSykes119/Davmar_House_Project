@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AttractionCard from '../components/AttractionCard.astro';
+---
+
+<Layout>
+  <section class="nearby-attractions">
+    <h1>Nearby Attractions</h1>
+    <p>Discover the best bars, restaurants, takeaways, and activities near Davmar House.</p>
+
+    <div class="attractions-grid">
+      <!-- Local Bars -->
+      <AttractionCard title="Muskerry Arms Bar" type="Bar" link="https://muskerryarms.com" imgSrc="/attractions/muskerry-arms.jpg" />
+      <AttractionCard title="Mick Malones Bar" type="Bar" link="#" imgSrc="/attractions/mick-malones.jpg" />
+      <AttractionCard title="Christys Bar" type="Bar" link="#" imgSrc="/attractions/christys-bar.jpg" />
+      <AttractionCard title="Blarney Castle Hotel Bar" type="Bar" link="#" imgSrc="/attractions/blarney-castle-bar.jpg" />
+
+      <!-- Local Restaurants -->
+      <AttractionCard title="Claddagh" type="Restaurant" link="#" imgSrc="/attractions/claddagh.jpg" />
+      <AttractionCard title="Amore Italiano" type="Restaurant" link="#" imgSrc="/attractions/amore-italiano.jpg" />
+      <AttractionCard title="Blarneys Burger" type="Restaurant" link="#" imgSrc="/attractions/blarneys-burger.jpg" />
+      <AttractionCard title="Tung Sing" type="Restaurant" link="#" imgSrc="/attractions/tung-sing.jpg" />
+      <AttractionCard title="The Lantern House" type="Restaurant" link="#" imgSrc="/attractions/lantern-house.jpg" />
+
+      <!-- Local Takeaways -->
+      <AttractionCard title="Apache Pizza" type="Takeaway" link="#" imgSrc="/attractions/apache-pizza.jpg" />
+      <AttractionCard title="Elizabeths Pizza" type="Takeaway" link="#" imgSrc="/attractions/elizabeths-pizza.jpg" />
+      <AttractionCard title="Tower Pizza" type="Takeaway" link="#" imgSrc="/attractions/tower-pizza.jpg" />
+      <AttractionCard title="Sals Takeaway" type="Takeaway" link="#" imgSrc="/attractions/sals-takeaway.jpg" />
+
+      <!-- Activities -->
+      <AttractionCard title="Blarney Castle and Gardens" type="Activity" link="https://blarneycastle.ie" imgSrc="/attractions/blarney-castle.jpg" />
+      <AttractionCard title="Old Gaol" type="Activity" link="#" imgSrc="/attractions/old-gaol.jpg" />
+      <AttractionCard title="GAA Matches" type="Activity" link="#" imgSrc="/attractions/gaa-matches.jpg" />
+      <AttractionCard title="Kinsale" type="Activity" link="#" imgSrc="/attractions/kinsale.jpg" />
+      <AttractionCard title="Cork City" type="Activity" link="#" imgSrc="/attractions/cork-city.jpg" />
+      <AttractionCard title="Páirc Uí Chaoimh" type="Activity" link="#" imgSrc="/attractions/pairc-ui-chaoimh.jpg" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .nearby-attractions {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+</style>
