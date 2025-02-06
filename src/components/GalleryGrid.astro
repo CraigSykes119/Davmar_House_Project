@@ -7,109 +7,125 @@ import "lightgallery/css/lg-zoom.css";
 <section class="gallery">
   <h2>Gallery</h2>
 
-  <!-- Standard Room Section -->
-  <div class="gallery-section">
-    <h3>Standard Room</h3>
-    <div id="lightgallery-standard" class="lightgallery">
-      <a href="/gallery_images/StandardRoom1.jpg">
-        <img src="/gallery_images/StandardRoom1.jpg" alt="Standard Room 1" />
-      </a>
-      <a href="/gallery_images/StandardRoom2.jpg">
-        <img src="/gallery_images/StandardRoom2.jpg" alt="Standard Room 2" />
-      </a>
-      <a href="/gallery_images/StandardRoom3.jpg">
-        <img src="/gallery_images/StandardRoom3.jpg" alt="Standard Room 3" />
-      </a>
-      <a href="/gallery_images/StandardRoom4.jpg">
-        <img src="/gallery_images/StandardRoom4.jpg" alt="Standard Room 4" />
-      </a>
-      <a href="/gallery_images/StandardRoom5.jpg">
-        <img src="/gallery_images/StandardRoom5.jpg" alt="Standard Room 5" />
-      </a>
-      <a href="/gallery_images/StandardRoom6.jpg">
-        <img src="/gallery_images/StandardRoom6.jpg" alt="Standard Room 6" />
-      </a>
-    </div>
+  <!-- Filter Buttons -->
+  <div class="gallery-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="standard">Standard Room</button>
+    <button class="filter-btn" data-filter="deluxe">Deluxe Room</button>
+    <button class="filter-btn" data-filter="suite">Suite Room</button>
   </div>
 
-  <!-- Deluxe Room Section -->
-  <div class="gallery-section">
-    <h3>Deluxe Room</h3>
-    <div id="lightgallery-deluxe" class="lightgallery">
-      <a href="/gallery_images/DeluxeRoom1.jpg">
-        <img src="/gallery_images/DeluxeRoom1.jpg" alt="Deluxe Room 1" />
-      </a>
-      <a href="/gallery_images/DeluxeRoom2.jpg">
-        <img src="/gallery_images/DeluxeRoom2.jpg" alt="Deluxe Room 2" />
-      </a>
-      <a href="/gallery_images/DeluxeRoom3.jpg">
-        <img src="/gallery_images/DeluxeRoom3.jpg" alt="Deluxe Room 3" />
-      </a>
-      <a href="/gallery_images/DeluxeRoom4.jpg">
-        <img src="/gallery_images/DeluxeRoom4.jpg" alt="Deluxe Room 4" />
-      </a>
-      <a href="/gallery_images/DeluxeRoom5.jpg">
-        <img src="/gallery_images/DeluxeRoom5.jpg" alt="Deluxe Room 5" />
-      </a>
-      <a href="/gallery_images/DeluxeRoom6.jpg">
-        <img src="/gallery_images/DeluxeRoom6.jpg" alt="Deluxe Room 6" />
-      </a>
-    </div>
-  </div>
+  <!-- Image Grid -->
+  <div id="lightgallery" class="lightgallery">
 
-  <!-- Suite Room Section -->
-  <div class="gallery-section">
-    <h3>Suite Room</h3>
-    <div id="lightgallery-suite" class="lightgallery">
-      <a href="/gallery_images/SuiteRoom1.jpg">
-        <img src="/gallery_images/SuiteRoom1.jpg" alt="Suite Room 1" />
-      </a>
-      <a href="/gallery_images/SuiteRoom2.jpg">
-        <img src="/gallery_images/SuiteRoom2.jpg" alt="Suite Room 2" />
-      </a>
-      <a href="/gallery_images/SuiteRoom3.jpg">
-        <img src="/gallery_images/SuiteRoom3.jpg" alt="Suite Room 3" />
-      </a>
-      <a href="/gallery_images/SuiteRoom4.jpg">
-        <img src="/gallery_images/SuiteRoom4.jpg" alt="Suite Room 4" />
-      </a>
-      <a href="/gallery_images/SuiteRoom5.jpg">
-        <img src="/gallery_images/SuiteRoom5.jpg" alt="Suite Room 5" />
-      </a>
-      <a href="/gallery_images/SuiteRoom6.jpg">
-        <img src="/gallery_images/SuiteRoom6.jpg" alt="Suite Room 6" />
-      </a>
-      <a href="/gallery_images/SuiteRoom7.jpg">
-        <img src="/gallery_images/SuiteRoom7.jpg" alt="Suite Room 7" />
-      </a>
-      <a href="/gallery_images/SuiteRoom8.jpg">
-        <img src="/gallery_images/SuiteRoom8.jpg" alt="Suite Room 8" />
-      </a>
-      <a href="/gallery_images/SuiteRoom9.jpg">
-        <img src="/gallery_images/SuiteRoom9.jpg" alt="Suite Room 9" />
-      </a>
-    </div>
+    <!-- Standard Room Section -->
+    <a href="/gallery_images/StandardRoom1.jpg" class="gallery-item standard">
+      <img src="/gallery_images/StandardRoom1.jpg" alt="Standard Room 1" />
+    </a>
+    <a href="/gallery_images/StandardRoom2.jpg" class="gallery-item standard">
+      <img src="/gallery_images/StandardRoom2.jpg" alt="Standard Room 2" />
+    </a>
+    <a href="/gallery_images/StandardRoom3.jpg" class="gallery-item standard">
+      <img src="/gallery_images/StandardRoom3.jpg" alt="Standard Room 3" />
+    </a>
+    <a href="/gallery_images/StandardRoom4.jpg" class="gallery-item standard">
+      <img src="/gallery_images/StandardRoom4.jpg" alt="Standard Room 4" />
+    </a>
+    <a href="/gallery_images/StandardRoom5.jpg" class="gallery-item standard">
+      <img src="/gallery_images/StandardRoom5.jpg" alt="Standard Room 5" />
+    </a>
+    <a href="/gallery_images/StandardRoom6.jpg" class="gallery-item standard">
+      <img src="/gallery_images/StandardRoom6.jpg" alt="Standard Room 6" />
+    </a>
+
+    <!-- Deluxe Room Section -->
+    <a href="/gallery_images/DeluxeRoom1.jpg" class="gallery-item deluxe">
+      <img src="/gallery_images/DeluxeRoom1.jpg" alt="Deluxe Room 1" />
+    </a>
+    <a href="/gallery_images/DeluxeRoom2.jpg" class="gallery-item deluxe">
+      <img src="/gallery_images/DeluxeRoom2.jpg" alt="Deluxe Room 2" />
+    </a>
+    <a href="/gallery_images/DeluxeRoom3.jpg" class="gallery-item deluxe">
+      <img src="/gallery_images/DeluxeRoom3.jpg" alt="Deluxe Room 3" />
+    </a>
+    <a href="/gallery_images/DeluxeRoom4.jpg" class="gallery-item deluxe">
+      <img src="/gallery_images/DeluxeRoom4.jpg" alt="Deluxe Room 4" />
+    </a>
+    <a href="/gallery_images/DeluxeRoom5.jpg" class="gallery-item deluxe">
+      <img src="/gallery_images/DeluxeRoom5.jpg" alt="Deluxe Room 5" />
+    </a>
+    <a href="/gallery_images/DeluxeRoom6.jpg" class="gallery-item deluxe">
+      <img src="/gallery_images/DeluxeRoom6.jpg" alt="Deluxe Room 6" />
+    </a>
+
+    <!-- Suite Room Section -->
+    <a href="/gallery_images/SuiteRoom1.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom1.jpg" alt="Suite Room 1" />
+    </a>
+    <a href="/gallery_images/SuiteRoom2.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom2.jpg" alt="Suite Room 2" />
+    </a>
+    <a href="/gallery_images/SuiteRoom3.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom3.jpg" alt="Suite Room 3" />
+    </a>
+    <a href="/gallery_images/SuiteRoom4.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom4.jpg" alt="Suite Room 4" />
+    </a>
+    <a href="/gallery_images/SuiteRoom5.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom5.jpg" alt="Suite Room 5" />
+    </a>
+    <a href="/gallery_images/SuiteRoom6.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom6.jpg" alt="Suite Room 6" />
+    </a>
+    <a href="/gallery_images/SuiteRoom7.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom7.jpg" alt="Suite Room 7" />
+    </a>
+    <a href="/gallery_images/SuiteRoom8.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom8.jpg" alt="Suite Room 8" />
+    </a>
+    <a href="/gallery_images/SuiteRoom9.jpg" class="gallery-item suite">
+      <img src="/gallery_images/SuiteRoom9.jpg" alt="Suite Room 9" />
+    </a>
+
   </div>
 </section>
 
-<!-- Initialize LightGallery -->
+<!-- Filtering Logic -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     import("lightgallery").then((lg) => {
       import("lightgallery/plugins/thumbnail").then((lgThumbnail) => {
         import("lightgallery/plugins/zoom").then((lgZoom) => {
-          const standardGallery = document.getElementById("lightgallery-standard");
-          const deluxeGallery = document.getElementById("lightgallery-deluxe");
-          const suiteGallery = document.getElementById("lightgallery-suite");
+          const galleryElement = document.getElementById("lightgallery");
+          if (galleryElement) {
+            lg.default(galleryElement, {
+              plugins: [lgThumbnail.default, lgZoom.default],
+              speed: 500,
+            });
+          }
+        });
+      });
+    });
 
-          if (standardGallery) {
-            lg.default(standardGallery, { plugins: [lgThumbnail.default, lgZoom.default], speed: 500 });
-          }
-          if (deluxeGallery) {
-            lg.default(deluxeGallery, { plugins: [lgThumbnail.default, lgZoom.default], speed: 500 });
-          }
-          if (suiteGallery) {
-            lg.default(suiteGallery, { plugins: [lgThumbnail.default, lgZoom.default], speed: 500 });
+    // Filtering Logic
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Remove active class from all buttons
+        filterButtons.forEach((button) => button.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.getAttribute("data-filter") || "all"; // Ensure it's always a string
+
+        galleryItems.forEach((item) => {
+          if (item instanceof HTMLElement) { // Ensure item is an HTMLElement
+            if (filter === "all" || item.classList.contains(filter)) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
           }
         });
       });
@@ -117,20 +133,35 @@ import "lightgallery/css/lg-zoom.css";
   });
 </script>
 
+
+<!-- Styles -->
 <style>
   .gallery {
     text-align: center;
     margin: 3rem 0;
   }
 
-  .gallery-section {
-    margin-bottom: 3rem;
+  /* Filter Buttons */
+  .gallery-filters {
+    margin-bottom: 20px;
   }
 
-  .gallery-section h3 {
-    color: #12763e;
+  .filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #12763e;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
   }
 
+  .filter-btn.active {
+    background-color: #d8ad40;
+  }
+
+  /* LightGallery Grid */
   .lightgallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -139,13 +170,13 @@ import "lightgallery/css/lg-zoom.css";
     padding: 20px;
   }
 
-  .lightgallery a {
+  .gallery-item {
     display: block;
     border-radius: 8px;
     overflow: hidden;
   }
 
-  .lightgallery img {
+  .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
@@ -153,7 +184,7 @@ import "lightgallery/css/lg-zoom.css";
     transition: transform 0.2s ease;
   }
 
-  .lightgallery img:hover {
+  .gallery-item img:hover {
     transform: scale(1.05);
   }
 </style>
