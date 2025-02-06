@@ -33,10 +33,17 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
       const contactForm = document.getElementById("contact-form");
+  
+      // Ensure contactForm is actually a form element
+      if (!(contactForm instanceof HTMLFormElement)) {
+        console.error("Form element not found or incorrect type.");
+        return;
+      }
+  
       const responseMessage = document.getElementById("response-message");
   
-      if (!contactForm || !responseMessage) {
-        console.error("Form or response message element not found.");
+      if (!responseMessage) {
+        console.error("Response message element not found.");
         return;
       }
   
@@ -56,7 +63,7 @@
             responseMessage.style.display = "block";
             responseMessage.style.color = "green";
             responseMessage.textContent = "✅ Message sent successfully!";
-            contactForm.reset();
+            contactForm.reset(); // ✅ No more TypeScript errors!
           } else {
             throw new Error(result.message);
           }
@@ -68,5 +75,6 @@
       });
     });
   </script>
+  
   
   
