@@ -16,10 +16,14 @@ jobs:
     steps:
       - name: Checkout your repository
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Build Astro site
+        run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: . # The root location of your Astro project
+          path: dist # Ensures GitHub deploys the built site from the correct folder
 
   deploy:
     needs: build
