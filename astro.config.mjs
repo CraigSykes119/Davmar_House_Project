@@ -1,12 +1,7 @@
 import { defineConfig } from "astro/config";
 
-import node from "@astrojs/node";
-
 export default defineConfig({
-  // <-- This must be set for API routes to work
-  output: "server",
-
-  adapter: node({
-    mode: "standalone"
-  })
+  site: "https://CraigSykes119.github.io/Davmar_House_Project", // Replace with your actual GitHub Pages URL
+  base: "/Davmar_House_Project/", // Your repo name prefixed with "/"
+  output: "static", // Set to static for GitHub Pages
 });
