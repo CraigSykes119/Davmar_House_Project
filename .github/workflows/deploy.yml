@@ -22,11 +22,11 @@ jobs:
         with:
           path: . # The root location of your Astro project
 
-      - name: Upload Artifact (Updated to v4)
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages
-          path: dist # Change this to your actual Astro output directory
+          name: github-pages-${{ github.run_id }}  # Unique artifact name per run
+          path: dist  # Update this to match your Astro build output directory
 
   deploy:
     needs: build
