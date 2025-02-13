@@ -39,11 +39,19 @@ const { title, price, imgSrc, description } = Astro.props;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1rem; /* Ensuring padding for better spacing */
   }
 
   .room-price {
     font-size: 1.2rem;
     color: #12763e;
     font-weight: bold;
+  }
+
+  /* 📌 Adjust min-height for better mobile compatibility */
+  @media (max-width: 768px) {
+    .room-card {
+      min-height: 380px; /* Reduce height on smaller screens */
+    }
   }
 </style>
