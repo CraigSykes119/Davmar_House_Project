@@ -1,7 +1,7 @@
 ---
 const apiKey: string = import.meta.env.VITE_WEATHER_API_KEY;
 const lat: string = "51.940363"; // Blarney Latitude
-const lon: string = "-8.568047"; // Blarney Longitude";
+const lon: string = "-8.568047"; // Blarney Longitude
 const units: string = "metric";
 
 // Define types for weather response
@@ -12,14 +12,14 @@ interface WeatherResponse {
   wind: { speed: number };
 }
 
-// Fetch weather data
+// Fetch weather data function
 const fetchWeather = async (): Promise<WeatherResponse | null> => {
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`
     );
 
-    if (!response.ok) throw new Error("Failed to fetch weather data");
+    if (!response.ok) throw new Error("❌ Failed to fetch weather data");
 
     return await response.json();
   } catch (error) {
@@ -28,8 +28,13 @@ const fetchWeather = async (): Promise<WeatherResponse | null> => {
   }
 };
 
-// Load initial weather data
+// Reactive weather data
 let data = await fetchWeather();
+
+// Auto-refresh every 10 minutes
+setInterval(async () => {
+  data = await fetchWeather();
+}, 600000); // 600000ms = 10 minutes
 ---
 
 <!-- Weather Widget -->
@@ -38,12 +43,12 @@ let data = await fetchWeather();
     <>
       <!-- Current Weather -->
       <div class="weather-current">
-        <h3>🌍 {data.name} Weather</h3>
-        <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="Weather Icon" />
-        <p>{data.weather[0].description}</p>
-        <p>🌡️ {data.main.temp}°C</p>
-        <p>💨 {data.wind.speed} m/s</p>
-        <p>🌧️ Humidity: {data.main.humidity}%</p>
+        <h3>🌍 {data?.name || "Unknown Location"} Weather</h3>
+        <img src={`https://openweathermap.org/img/wn/${data?.weather?.[0]?.icon}@2x.png`} alt="Weather Icon" />
+        <p>{data?.weather?.[0]?.description || "No data available"}</p>
+        <p>🌡️ {data?.main?.temp ?? "--"}°C</p>
+        <p>💨 {data?.wind?.speed ?? "--"} m/s</p>
+        <p>🌧️ Humidity: {data?.main?.humidity ?? "--"}%</p>
       </div>
     </>
   ) : (
@@ -67,5 +72,4 @@ let data = await fetchWeather();
   padding: 10px;
   border-radius: 8px;
 }
-
 </style>
