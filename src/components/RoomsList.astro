@@ -1,23 +1,25 @@
 ---
 import RoomCard from './RoomCard.astro';
 
+const basePath = "/Davmar_House_Project"; // Ensure GitHub Pages compatibility
+
 const rooms = [
   {
     title: "Standard Room",
     price: "€90 per night",
-    imgSrc: "/room_images/STDroom.jpg",
+    imgSrc: `${basePath}/room_images/STDroom.jpg`, // Fixed path
     description: "A cozy standard room with modern amenities."
   },
   {
     title: "Deluxe Room",
     price: "€120 per night",
-    imgSrc: "/room_images/DELroom.jpg",
+    imgSrc: `${basePath}/room_images/DELroom.jpg`, // Fixed path
     description: "A spacious deluxe room with a scenic view."
   },
   {
     title: "Suite",
     price: "€150 per night",
-    imgSrc: "/room_images/SUITEroom.jpg",
+    imgSrc: `${basePath}/room_images/SUITEroom.jpg`, // Fixed path
     description: "Our most luxurious suite with premium features."
   }
 ];
@@ -26,7 +28,7 @@ const rooms = [
 <section class="rooms-list container">
   <div class="row justify-content-center">
     {rooms.map((room) => (
-      <div class="col-md-4 d-flex">
+      <div class="col-md-4 d-flex flex-column">
         <RoomCard {...room} />
       </div>
     ))}
