@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContactForm from '../components/ContactForm.astro';
+
+const googleMapsSrc = `https://www.google.com/maps/embed/v1/place?key=${import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY}&q=51.940363,-8.568047`;
 ---
 
 <Layout>
@@ -19,7 +21,7 @@ import ContactForm from '../components/ContactForm.astro';
         <h2>Check-in & Check-out</h2>
         <p><strong>✅ Check-in:</strong> From 2:00 PM</p>
         <p><strong>⏳ Check-out:</strong> Until 11:00 AM</p>
-      </div>
+    </div>
 
     <!-- Google Maps Embed -->
     <div class="map-container">
@@ -31,8 +33,18 @@ import ContactForm from '../components/ContactForm.astro';
           allowfullscreen
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY}&q=51.940363,-8.568047`}>
+          src={googleMapsSrc}>
         </iframe>
     </div>
   </section>
+
+  <style>
+    .contact-details {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </Layout>
