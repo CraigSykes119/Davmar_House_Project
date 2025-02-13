@@ -1,12 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AttractionsGrid from '../components/AttractionsGrid.astro';
+import WeatherWidget from '../components/WeatherWidget.astro';
 ---
 
 <Layout>
   <section class="nearby-attractions">
     <h1>Nearby Attractions</h1>
     <p>Discover the best bars, restaurants, takeaways, and activities near Davmar House.</p>
+
+    <WeatherWidget />
 
     <AttractionsGrid />
   </section>

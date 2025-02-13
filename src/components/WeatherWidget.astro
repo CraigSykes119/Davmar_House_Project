@@ -1,7 +1,8 @@
 ---
-const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-const city = "Blarney,IE"; // Blarney, Ireland
-const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY; 
+const lat = "51.940363"; // Blarney, Ireland Latitude
+const lon = "-8.568047"; // Blarney, Ireland Longitude
+const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
 let weatherData = null;
 
