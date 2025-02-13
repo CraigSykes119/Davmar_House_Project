@@ -2,7 +2,7 @@
 const { title, type, link, imgSrc } = Astro.props;
 ---
 
-<div class="attraction-card">
+<div class="attraction-card" data-type={type.toLowerCase()}>
   <img src={imgSrc} alt={title} class="attraction-image" />
   <div class="attraction-info">
     <h3>{title}</h3>
