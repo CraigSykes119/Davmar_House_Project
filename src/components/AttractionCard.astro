@@ -13,44 +13,53 @@ const { title, type, link, imgSrc } = Astro.props;
 
 <style>
   .attraction-card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-  }
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures all cards stretch equally */
+}
 
-  .attraction-card:hover {
-    transform: scale(1.05);
-  }
+.attraction-card:hover {
+  transform: scale(1.05);
+}
 
-  .attraction-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
+.attraction-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-  .attraction-info {
-    padding: 15px;
-  }
+.attraction-info {
+  padding: 15px;
+  flex-grow: 1; /* Allows text section to expand as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to bottom */
+}
 
-  .attraction-type {
-    color: #12763e;
-    font-weight: bold;
-  }
+.attraction-type {
+  color: #12763e;
+  font-weight: bold;
+  margin-bottom: 10px; /* Ensure spacing */
+}
 
-  .learn-more {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background-color: #12763e;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
+.learn-more {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #12763e;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: auto; /* Ensures alignment at bottom */
+}
 
-  .learn-more:hover {
-    background-color: #0e5b2e;
-  }
+.learn-more:hover {
+  background-color: #0e5b2e;
+}
+
 </style>
