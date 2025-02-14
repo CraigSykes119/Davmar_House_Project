@@ -9,13 +9,14 @@ import RoomsList from '../components/RoomsList.astro';
     <p>Comfortable and modern accommodation in the heart of Blarney.</p>
   </section>
 
-  <!-- Facilities Section -->
-  <section class="facilities">
-    <h2>Our Facilities & Activities Available</h2>
-    
-    <div class="row">
+ <!-- Facilities Section -->
+<section class="facilities">
+  <h2>Our Facilities & Activities Available</h2>
+
+  <div class="container">
+    <div class="row justify-content-center">
       <!-- Main Facilities Box -->
-      <div class="col-md-6">
+      <div class="col-md-6 d-flex">
         <div class="facility-box">
           <h3>Main Facilities</h3>
           <ul>
@@ -30,7 +31,7 @@ import RoomsList from '../components/RoomsList.astro';
       </div>
 
       <!-- Activities Box -->
-      <div class="col-md-6">
+      <div class="col-md-6 d-flex">
         <div class="facility-box">
           <h3>Nearby Activities & Experiences</h3>
           <ul>
@@ -47,7 +48,10 @@ import RoomsList from '../components/RoomsList.astro';
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <RoomsList />
 </Layout>

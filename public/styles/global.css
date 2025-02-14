@@ -186,6 +186,23 @@ body {
   margin-bottom: 20px;
 }
 
+/* Rooms Page */
+.rooms-hero {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.rooms-hero h1 {
+  font-size: 2rem;
+  color: #12763e;
+}
+
+.rooms-hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
 /* Facilities Section */
 .facilities {
   text-align: center;
@@ -198,10 +215,11 @@ body {
   color: #12763e;
 }
 
-.row {
+.facilities .row {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .facility-box {
@@ -209,8 +227,10 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: left; /* Ensured consistent alignment */
-  width: 48%; /* Responsive width */
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
 
 .facility-box h3 {
