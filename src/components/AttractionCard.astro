@@ -2,14 +2,15 @@
 const { title, type, link, imgSrc } = Astro.props;
 ---
 
-<div class="attraction-card" data-type={String(type).toLowerCase()}>
-  <img src={`/Davmar_House_Project/${imgSrc}`} alt={title} class="attraction-image" />
+<div class="attraction-card" data-type={type.toLowerCase()}>
+  <img src={imgSrc} alt={title} class="attraction-image" loading="lazy" />
   <div class="attraction-info">
     <h3>{title}</h3>
     <p class="attraction-type">{type}</p>
     <a href={link} target="_blank" class="learn-more">Learn More</a>
   </div>
 </div>
+
 
 <style>
   .attraction-card {
