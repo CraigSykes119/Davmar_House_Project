@@ -1,35 +1,40 @@
 <form id="contact-form" class="contact-form">
   <div class="form-group">
-      <label for="name">Name*</label>
-      <input type="text" id="name" name="name" required />
+    <label for="name">Name*</label>
+    <input type="text" id="name" name="name" required pattern="[A-Za-z\s'-]+" title="Only letters, spaces, apostrophes, and hyphens allowed" />
+    <small class="error-message" id="name-error"></small>
   </div>
 
   <div class="form-group">
-      <label for="email">Email*</label>
-      <input type="email" id="email" name="email" required />
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" required />
+    <small class="error-message" id="email-error"></small>
   </div>
 
   <div class="form-group">
-      <label for="country">Country*</label>
-      <input type="text" id="country" name="country" required />
+    <label for="country">Country*</label>
+    <input type="text" id="country" name="country" required pattern="[A-Za-z\s'-]+" title="Only letters, spaces, apostrophes, and hyphens allowed" />
+    <small class="error-message" id="country-error"></small>
   </div>
 
   <div class="form-group">
-      <label for="telephone">Telephone*</label>
-      <input type="tel" id="telephone" name="telephone" required />
+    <label for="telephone">Telephone*</label>
+    <input type="tel" id="telephone" name="telephone" required pattern="^[+\d\s()-]+$" title="Only numbers, +, -, spaces, and parentheses allowed" />
+    <small class="error-message" id="telephone-error"></small>
   </div>
 
   <div class="form-group">
-      <label for="message">How can we help you?*</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="message">How can we help you?*</label>
+    <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+    <small class="error-message" id="message-error"></small>
   </div>
 
   <button type="submit" class="submit-btn">Send Message</button>
-
-  <p id="response-message" style="display: none;"></p>
+  <p id="response-message" class="response-message" role="alert" style="display: none;"></p>
 </form>
 
 <style>
+/* Form Styling */
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -50,6 +55,7 @@
   margin-bottom: 5px;
 }
 
+/* Input and Textarea Styling */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -59,10 +65,22 @@
   font-size: 1rem;
 }
 
-.contact-form textarea {
-  resize: vertical;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #12763e;
+  outline: none;
+  box-shadow: 0 0 5px rgba(18, 118, 62, 0.5);
 }
 
+/* Error Messages */
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  height: 16px;
+  display: block;
+}
+
+/* Submit Button Styling */
 .contact-form .submit-btn {
   background-color: #12763e;
   color: white;
@@ -72,14 +90,14 @@
   cursor: pointer;
   border-radius: 5px;
   width: 100%;
-  transition: background 0.3s ease;
 }
 
 .contact-form .submit-btn:hover {
   background-color: #0e5b2e;
 }
 
-#response-message {
+/* Response Message */
+.response-message {
   margin-top: 1rem;
   font-weight: bold;
   text-align: center;
@@ -87,30 +105,83 @@
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contact-form") as HTMLFormElement; // ✅ Explicitly cast as HTMLFormElement
-  const responseMessage = document.getElementById("response-message");
-
-  if (!contactForm || !responseMessage) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contact-form") as HTMLFormElement | null;
+    const responseMessage = document.getElementById("response-message") as HTMLElement | null;
+  
+    if (!contactForm || !responseMessage) {
       console.error("❌ Form or response message element not found.");
       return;
-  }
-
-  contactForm.addEventListener("submit", function (event) {
+    }
+  
+    // Validation function
+    const validateInput = (
+      input: HTMLInputElement | HTMLTextAreaElement,
+      errorMessage: HTMLElement,
+      regex: RegExp | null,
+      minLength: number = 0
+    ): boolean => {
+      const value = input.value.trim();
+  
+      if (!value) {
+        errorMessage.textContent = `${input.name} is required.`;
+        input.style.borderColor = "red";
+        return false;
+      }
+  
+      if (regex && !regex.test(value)) {
+        errorMessage.textContent = `Invalid ${input.name}.`;
+        input.style.borderColor = "red";
+        return false;
+      }
+  
+      if (value.length < minLength) {
+        errorMessage.textContent = `${input.name} must be at least ${minLength} characters.`;
+        input.style.borderColor = "red";
+        return false;
+      }
+  
+      errorMessage.textContent = "";
+      input.style.borderColor = "#ccc";
+      return true;
+    };
+  
+    contactForm.addEventListener("submit", function (event: Event) {
       event.preventDefault();
-
-      // Display success message
+  
+      // Input Elements
+      const nameInput = document.getElementById("name") as HTMLInputElement;
+      const emailInput = document.getElementById("email") as HTMLInputElement;
+      const countryInput = document.getElementById("country") as HTMLInputElement;
+      const telephoneInput = document.getElementById("telephone") as HTMLInputElement;
+      const messageInput = document.getElementById("message") as HTMLTextAreaElement;
+  
+      // Error Message Elements
+      const nameError = document.getElementById("name-error") as HTMLElement;
+      const emailError = document.getElementById("email-error") as HTMLElement;
+      const countryError = document.getElementById("country-error") as HTMLElement;
+      const telephoneError = document.getElementById("telephone-error") as HTMLElement;
+      const messageError = document.getElementById("message-error") as HTMLElement;
+  
+      // Validation Rules
+      const isNameValid = validateInput(nameInput, nameError, /^[A-Za-z\s'-]+$/); // ✅ No numbers allowed
+      const isEmailValid = validateInput(emailInput, emailError, /^[^\s@]+@[^\s@]+\.[^\s@]+$/); // ✅ Must have '@'
+      const isCountryValid = validateInput(countryInput, countryError, /^[A-Za-z\s'-]+$/); // ✅ Cannot be blank
+      const isTelephoneValid = validateInput(telephoneInput, telephoneError, /^[0-9+\s-]+$/); // ✅ Only numbers, +, -
+      const isMessageValid = validateInput(messageInput, messageError, null, 1); // ✅ Must have at least 1 character
+  
+      if (!isNameValid || !isEmailValid || !isCountryValid || !isTelephoneValid || !isMessageValid) {
+        return; // Stop form submission if validation fails
+      }
+  
+      // Show success message
       responseMessage.style.display = "block";
       responseMessage.style.color = "green";
       responseMessage.textContent = "✅ Message sent successfully!";
-
-      // Clear form fields
-      contactForm.reset(); // ✅ Now recognized as a form, no TypeScript error
-
-      // Hide message after 3 seconds
-      setTimeout(() => {
-          responseMessage.style.display = "none";
-      }, 3000);
+  
+      // Reset form safely
+      contactForm.reset();
+    });
   });
-});
-</script>
+  </script>
+  
