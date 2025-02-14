@@ -1,6 +1,6 @@
 ---
 // This part uses the environment variable from .env file
-const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+const apiKey: string = import.meta.env.PUBLIC_WEATHER_API_KEY;
 const lat = "51.940363"; // Latitude of Blarney
 const lon = "-8.568047"; // Longitude of Blarney
 const units = "metric"; // Units for temperature in Celsius
