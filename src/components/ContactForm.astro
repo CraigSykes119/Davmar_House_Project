@@ -1,35 +1,35 @@
 <form id="contact-form" class="contact-form">
-    <div class="form-group">
+  <div class="form-group">
       <label for="name">Name*</label>
       <input type="text" id="name" name="name" required />
-    </div>
-  
-    <div class="form-group">
+  </div>
+
+  <div class="form-group">
       <label for="email">Email*</label>
       <input type="email" id="email" name="email" required />
-    </div>
-  
-    <div class="form-group">
+  </div>
+
+  <div class="form-group">
       <label for="country">Country*</label>
       <input type="text" id="country" name="country" required />
-    </div>
-  
-    <div class="form-group">
+  </div>
+
+  <div class="form-group">
       <label for="telephone">Telephone*</label>
       <input type="tel" id="telephone" name="telephone" required />
-    </div>
-  
-    <div class="form-group">
+  </div>
+
+  <div class="form-group">
       <label for="message">How can we help you?*</label>
       <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-  
-    <button type="submit" class="submit-btn">Send Message</button>
-  
-    <p id="response-message" style="display: none;"></p>
-  </form>
+  </div>
 
-  <style>
+  <button type="submit" class="submit-btn">Send Message</button>
+
+  <p id="response-message" style="display: none;"></p>
+</form>
+
+<style>
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -45,7 +45,7 @@
 
 .contact-form label {
   font-weight: bold;
-  color: #12763e; /* Deep green */
+  color: #12763e;
   display: block;
   margin-bottom: 5px;
 }
@@ -84,59 +84,33 @@
   font-weight: bold;
   text-align: center;
 }
-
 </style>
 
-  
-  <!-- JavaScript for Form Handling -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const contactForm = document.getElementById("contact-form");
-  
-      // Ensure contactForm is actually a form element
-      if (!(contactForm instanceof HTMLFormElement)) {
-        console.error("Form element not found or incorrect type.");
-        return;
-      }
-  
-      const responseMessage = document.getElementById("response-message");
-  
-      if (!responseMessage) {
-        console.error("Response message element not found.");
-        return;
-      }
-  
-      contactForm.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Prevent default form submission
-  
-        const formData = new FormData(contactForm);
-  
-        try {
-          const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json", // Ensure JSON format
-            },
-            body: JSON.stringify(Object.fromEntries(formData)),
-          });
-  
-          const result = await response.json();
-  
-          responseMessage.style.display = "block";
-          responseMessage.style.color = result.success ? "green" : "red";
-          responseMessage.textContent = result.success ? "✅ Message received!" : "❌ Error submitting form.";
-  
-          if (result.success) {
-            contactForm.reset(); // ✅ No more TypeScript errors!
-          }
-        } catch (error) {
-          responseMessage.style.display = "block";
-          responseMessage.style.color = "red";
-          responseMessage.textContent = "❌ Failed to submit. Try again later.";
-        }
-      });
-    });
-  </script>
-  
-  
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contact-form") as HTMLFormElement; // ✅ Explicitly cast as HTMLFormElement
+  const responseMessage = document.getElementById("response-message");
+
+  if (!contactForm || !responseMessage) {
+      console.error("❌ Form or response message element not found.");
+      return;
+  }
+
+  contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Display success message
+      responseMessage.style.display = "block";
+      responseMessage.style.color = "green";
+      responseMessage.textContent = "✅ Message sent successfully!";
+
+      // Clear form fields
+      contactForm.reset(); // ✅ Now recognized as a form, no TypeScript error
+
+      // Hide message after 3 seconds
+      setTimeout(() => {
+          responseMessage.style.display = "none";
+      }, 3000);
+  });
+});
+</script>
