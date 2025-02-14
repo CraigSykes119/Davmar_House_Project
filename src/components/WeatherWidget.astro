@@ -1,67 +1,80 @@
 ---
-const apiKey = "dec71db9c9720d1ccee8db5494995074"; // Replace with your actual API key
-const lat = "51.940363"; // Blarney Latitude
-const lon = "-8.568047"; // Blarney Longitude
-const units = "metric";
+const apiKey: string = import.meta.env.VITE_WEATHER_API_KEY;
+console.log("🚀 Weather widget script is running!");
+const lat: string = "51.940363"; // Blarney Latitude
+const lon: string = "-8.568047"; // Blarney Longitude
+const units: string = "metric";
+
+// Define types for weather response
+interface WeatherResponse {
+  name: string;
+  weather: { description: string; icon: string }[];
+  main: { temp: number; humidity: number };
+  wind: { speed: number };
+}
+
+// Fetch weather data function
+const fetchWeather = async (): Promise<WeatherResponse | null> => {
+  console.log("🔍 Attempting to fetch weather data..."); // Debugging log
+  try {
+    const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+    console.log("🌍 Fetching from URL:", weatherApiUrl); // Log the API URL
+
+    const response = await fetch(weatherApiUrl);
+    
+    if (!response.ok) throw new Error("❌ Failed to fetch weather data");
+    
+    console.log("✅ Successfully fetched weather data");
+    return await response.json();
+  } catch (error) {
+    console.error("❌ Error fetching weather:", error);
+    return null;
+  }
+};
+
+
+// Reactive weather data
+let data = await fetchWeather();
+
+// Auto-refresh every 10 minutes
+setInterval(async () => {
+  data = await fetchWeather();
+}, 600000); // 600000ms = 10 minutes
 ---
 
 <!-- Weather Widget -->
-<div class="weather-container" id="weather-widget">
-  <p>❌ Could not load weather data.</p> <!-- Default message before weather is loaded -->
+<div class="weather-container">
+  {data ? (
+    <>
+      <!-- Current Weather -->
+      <div class="weather-current">
+        <h3>🌍 {data?.name || "Unknown Location"} Weather</h3>
+        <img src={`https://openweathermap.org/img/wn/${data?.weather?.[0]?.icon}@2x.png`} alt="Weather Icon" />
+        <p>{data?.weather?.[0]?.description || "No data available"}</p>
+        <p>🌡️ {data?.main?.temp ?? "--"}°C</p>
+        <p>💨 {data?.wind?.speed ?? "--"} m/s</p>
+        <p>🌧️ Humidity: {data?.main?.humidity ?? "--"}%</p>
+      </div>
+    </>
+  ) : (
+    <p>❌ Could not load weather data.</p>
+  )}
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const apiKey = "YOUR_OPENWEATHERMAP_API_KEY_HERE"; // Replace with your actual API key
-    const lat = "51.940363";
-    const lon = "-8.568047";
-    const units = "metric";
-
-    const fetchWeather = async () => {
-      const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
-      try {
-        const response = await fetch(weatherApiUrl);
-        if (!response.ok) throw new Error("❌ Failed to fetch weather data");
-
-        const data = await response.json();
-
-        // Update DOM with the weather data
-        const weatherWidget = document.getElementById("weather-widget");
-        if (weatherWidget) {
-          weatherWidget.innerHTML = `
-            <div class="weather-current">
-              <h3>🌍 ${data.name} Weather</h3>
-              <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather Icon" />
-              <p>${data.weather[0].description}</p>
-              <p>🌡️ ${data.main.temp}°C</p>
-              <p>💨 ${data.wind.speed} m/s</p>
-              <p>🌧️ Humidity: ${data.main.humidity}%</p>
-            </div>
-          `;
-        }
-      } catch (error) {
-        console.error("❌ Error fetching weather:", error);
-      }
-    };
-
-    fetchWeather();
-    setInterval(fetchWeather, 600000); // Auto-refresh every 10 minutes
-  });
-</script>
-
 <style>
-  .weather-container {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 20px auto;
-    width: 350px;
-  }
+/* Weather Widget Styles */
+.weather-container {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 20px auto;
+  width: 350px;
+}
 
-  .weather-current {
-    padding: 10px;
-    border-radius: 8px;
-  }
+.weather-current {
+  padding: 10px;
+  border-radius: 8px;
+}
 </style>
