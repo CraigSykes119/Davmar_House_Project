@@ -21,6 +21,9 @@ jobs:
         uses: withastro/action@v3
         with:
           path: . # The root location of your Astro project
+        env:
+          PUBLIC_WEATHER_API_KEY: ${{ secrets.PUBLIC_WEATHER_API_KEY }}
+          PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.PUBLIC_GOOGLE_MAPS_API_KEY }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
