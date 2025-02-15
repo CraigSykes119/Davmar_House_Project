@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AttractionsGrid from '../components/AttractionsGrid.astro';
----
----
-console.log("🔍 API Key:", import.meta.env.PUBLIC_WEATHER_API_KEY);
+
+console.log("🔍 Full Environment Object:", import.meta.env);
+console.log("🌍 Weather API Key:", import.meta.env.PUBLIC_WEATHER_API_KEY);
+console.log("🗺️ Google Maps API Key:", import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY);
 ---
 
 <Layout>
