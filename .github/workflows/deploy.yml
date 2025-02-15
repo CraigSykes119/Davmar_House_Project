@@ -14,22 +14,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-      
-      - name: Install, build, and upload your site
+
+      - name: Manually Inject API Keys
+        run: |
+          echo "PUBLIC_WEATHER_API_KEY=0f8760117fd8a056e078ee40449edca9" >> $GITHUB_ENV
+          echo "PUBLIC_GOOGLE_MAPS_API_KEY=AIzaSyDdyNu2SXH0NzQ1xgJG6sv7kaz4njCOchA" >> $GITHUB_ENV
+
+      - name: Install, build, and upload site
         uses: withastro/action@v3
         with:
           path: . # The root location of your Astro project
-        env:
-          PUBLIC_WEATHER_API_KEY: ${{ secrets.PUBLIC_WEATHER_API_KEY }}
-          PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.PUBLIC_GOOGLE_MAPS_API_KEY }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages-${{ github.run_id }}  # Unique artifact name per run
-          path: dist  # Update this to match your Astro build output directory
+          name: github-pages-${{ github.run_id }}
+          path: dist  # Update to match your Astro build output directory
 
   deploy:
     needs: build

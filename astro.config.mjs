@@ -10,9 +10,7 @@ export default defineConfig({
   vite: {
     define: {
       "import.meta.env.PUBLIC_WEATHER_API_KEY": JSON.stringify(process.env.PUBLIC_WEATHER_API_KEY),
-    },define: {
-    'import.meta.env.PUBLIC_WEATHER_API_KEY': JSON.stringify(process.env.PUBLIC_WEATHER_API_KEY),
-    'import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY': JSON.stringify(process.env.PUBLIC_GOOGLE_MAPS_API_KEY),
-  },
+      "import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY": JSON.stringify(process.env.PUBLIC_GOOGLE_MAPS_API_KEY),
+    },
   },
 });
