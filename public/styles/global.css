@@ -325,6 +325,13 @@ body {
 
 
 /* Responsive Adjustments */
+
+@media (max-width: 992px) {
+  .custom-navbar .navbar-brand img {
+    max-height: 60px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-details {
     padding: 1.5rem;
@@ -347,15 +354,6 @@ body {
     width: 100%; /* Full width for smaller screens */
     margin-bottom: 20px;
   }
-}
-
-@media (max-width: 992px) {
-  .custom-navbar .navbar-brand img {
-    max-height: 60px;
-  }
-}
-
-@media (max-width: 768px) {
   .custom-navbar .navbar-brand img {
     max-height: 50px;
   }
