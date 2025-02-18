@@ -36,11 +36,11 @@ Deployed Site: <https://craigsykes119.github.io/Davmar_House_Project/>
   - [🛏️ **Rooms \& Rates**](#️-rooms--rates)
   - [🖼️ **Gallery Page**](#️-gallery-page)
   - [📍 **Nearby Attractions**](#-nearby-attractions)
+  - [](#)
   - [🌦️ **Live Weather Widget**](#️-live-weather-widget)
   - [📞 **Contact Page**](#-contact-page)
   - [🚀 **Features to Implement in the Future**](#-features-to-implement-in-the-future)
     - [**✅ Why This Matters?**](#-why-this-matters-2)
-    - [Features to implement in the future](#features-to-implement-in-the-future)
     - [Accessability](#accessability)
   - [Technology](#technology)
     - [Languages](#languages)
@@ -237,7 +237,7 @@ The design choices **align with the guesthouse’s brand and customer expectatio
 
 A **favicon** has been added to ensure the website has an **easily identifiable icon** in the browser tab, improving **brand recognition**.  
 
-![Favicon for the website](read_me/media/web-favicon.png)  
+![Favicon for the website](read_me/media/favicon-on-web.PNG)  
 
 ---
 
@@ -248,10 +248,9 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
   ✅ **Rooms & Rates**  
   ✅ **Nearby Attractions**  
   ✅ **Contact Us**  
+  
 
-- The **active page is highlighted** with an underline to provide **clear user feedback**.  
-
-![Active page on the website](read_me/media/active-page.png)  
+![Navbar on the website](read_me/media/navbar.png)  
 
 - A **hover effect** enhances usability by indicating **clickable elements**.  
 
@@ -270,7 +269,8 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
 ### 🔽 **Footer**  
 
 - The footer includes:  
-  ✅ A **title** for branding.  
+  ✅ A **copyright notice**.  
+  ✅ A **quick menu** for ease of navigation.  
   ✅ **Social media icons** for Facebook, Instagram, Twitter (X), and YouTube, which are **fully interactive**.  
 
 - These icons **act as a call to action**, encouraging users to explore **Davmar House’s online presence**.  
@@ -286,7 +286,7 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
 - The **hero image** is the first interaction visitors have with the website. It:  
   ✅ **Showcases the guesthouse and surrounding nature.**  
   ✅ **Includes overlay text** to communicate the guesthouse’s welcoming atmosphere.  
-  ✅ **Features a CTA button** to encourage users to learn more.  
+  ✅ **Features a CTA button** to encourage users to contact us.  
 
 - The **hero image is fully responsive**, ensuring it displays correctly on all screen sizes.  
 
@@ -332,13 +332,14 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
   ✅ A **brief description** of what visitors can expect.  
   ✅ **Links** for more details or navigation.  
 
+![Nearby Attractions](read_me/media/attraction-card.png)
 ---
 
 ## 🌦️ **Live Weather Widget**  
 
 - The **live weather widget** integrates with the **OpenWeatherMap API** to:  
   ✅ Display **real-time weather updates** for Blarney.  
-  ✅ Provide **temperature, conditions, and forecasts**.  
+  ✅ Provide **temperature, wind and humidity**.  
   ✅ Enhance **trip planning** for visitors.  
 
 ![Weather widget](read_me/media/weather-widget.png)  
@@ -369,6 +370,8 @@ Although this version of **Davmar House** is fully functional, future improvemen
 ✅ **Newsletter Subscription** – Let users sign up for exclusive offers and updates.  
 ✅ **FAQ Section** – Address common questions about accommodation and services.  
 ✅ **Event Listings** – Display local events happening near Davmar House.  
+✅ **Online Reviews** – Display reviews of past guests of Davmar House.  
+
 
 ---
 
@@ -377,15 +380,6 @@ Although this version of **Davmar House** is fully functional, future improvemen
 These features **enhance user experience, drive engagement, and improve functionality**, making **Davmar House a comprehensive and informative platform** for potential visitors.  
 
 ---
-
-### Features to implement in the future
-
-These features were included in this project dur to resources and time constraints. In the future, I reccomend to include:
-
-- Blogs can be added to the page in order to make it more educational. This would provide added value as well as help with SEO
-- A subscribe page to a newsletter could be created in order to communicate with frequent users of the site.
-- A FAQ page could be implemented in order to readily address beginner gardener's common questions.
-- An events section could be incorporated to let users know of what gardening events are occuring nearby or what projects |Craig has planned or involved in.
 
 ### Accessability
 
