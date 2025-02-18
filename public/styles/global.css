@@ -115,7 +115,7 @@ body {
 
 .swiper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   height: 100%;
 }
 
@@ -132,6 +132,10 @@ body {
 
 .hero .swiper-pagination {
   color: #d8ad40 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #d8ad40;
 }
 
 /* Welcome Section */
