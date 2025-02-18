@@ -2,7 +2,7 @@
 
 The Davmar House website is designed to provide an engaging and informative online presence for a guesthouse located in Blarney, County Cork, Ireland. This website offers a seamless user experience, allowing visitors to explore the guesthouse, browse amenities, discover nearby attractions, and easily make contact for inquiries or bookings. View the live site [here](https://craigsykes119.github.io/Davmar_House_Project/).
 
-![Davmar House website on various screen sizes](read_me\media\davmar-responsive.PNG) 
+![Davmar House website on multiple screens](read_me/media/davmar-responsive.PNG) 
 
 GitHub Profile: <https://github.com/CraigSykes119>
 Deployed Site: <https://craigsykes119.github.io/Davmar_House_Project/>
