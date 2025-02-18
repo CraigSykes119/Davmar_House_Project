@@ -250,19 +250,19 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
   ✅ **Contact Us**  
   
 
-![Navbar on the website](read_me/media/navbar.png)  
+![Navbar on the website](read_me/media/navbar.PNG)  
 
 - A **hover effect** enhances usability by indicating **clickable elements**.  
 
-![Cursor interacting with navigation menu](read_me/media/nav-hover.png)  
+![Cursor interacting with navigation menu](read_me/media/nav-hover.PNG)  
 
 - On **mobile screens (under 768px)**, the navigation menu **converts into a burger menu**, preserving the clean UI.  
 
-![Burger menu on smaller screens](read_me/media/nav-burger.png)  
+![Burger menu on smaller screens](read_me/media/nav-burger.PNG)  
 
 - When tapped, the **burger menu expands**, allowing users to navigate easily before collapsing again.  
 
-![Burger menu open on smaller screens](read_me/media/burger-open.png)  
+![Burger menu open on smaller screens](read_me/media/burger-open.PNG)  
 
 ---
 
@@ -275,7 +275,7 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
 
 - These icons **act as a call to action**, encouraging users to explore **Davmar House’s online presence**.  
 
-![Footer](read_me/media/footer-icons.png)  
+![Footer](read_me/media/footer-icons.PNG)  
 
 ---
 
@@ -290,7 +290,7 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
 
 - The **hero image is fully responsive**, ensuring it displays correctly on all screen sizes.  
 
-![Hero image on mobile and desktop](read_me/media/home-page/hero-responsive.png)  
+![Hero image on mobile and desktop](read_me/media/home-page/hero-responsive.PNG)  
 
 ---
 
@@ -310,13 +310,13 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
   ✅ **A filterable grid** to view different areas of the guesthouse.  
   ✅ **High-quality images** optimized for performance.  
 
-![Gallery introduction](read_me/media/gallery-page/gallery-intro-response.png)  
+![Gallery introduction](read_me/media/gallery-page/gallery-intro-response.PNG)  
 
 - The **fully responsive layout** ensures that images adapt to different screen sizes.  
 
-  - [Gallery on mobile](read_me/media/gallery-page/gallery-mobile.png)  
-  - [Gallery on tablet](read_me/media/gallery-page/gallery-tablet.png)  
-  - [Gallery on laptop](read_me/media/gallery-page/gallery-laptop.png)  
+  - [Gallery on mobile](read_me/media/gallery-page/gallery-mobile.PNG)  
+  - [Gallery on tablet](read_me/media/gallery-page/gallery-tablet.PNG)  
+  - [Gallery on laptop](read_me/media/gallery-page/gallery-laptop.PNG)  
 
 ---
 
@@ -332,7 +332,7 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
   ✅ A **brief description** of what visitors can expect.  
   ✅ **Links** for more details or navigation.  
 
-![Nearby Attractions](read_me/media/attraction-card.png)
+![Nearby Attractions](read_me/media/attraction-card.PNG)
 ---
 
 ## 🌦️ **Live Weather Widget**  
@@ -342,7 +342,7 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
   ✅ Provide **temperature, wind and humidity**.  
   ✅ Enhance **trip planning** for visitors.  
 
-![Weather widget](read_me/media/weather-widget.png)  
+![Weather widget](read_me/media/weather-widget.PNG)  
 
 ---
 
@@ -355,9 +355,9 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
 
 - The **form is fully responsive** and adapts to different screen sizes.  
 
-  - [Contact page on mobile](read_me/media/contact-page/contact-me-mobile.png)  
-  - [Contact page on tablet](read_me/media/contact-page/contact-me-tablet.png)  
-  - [Contact page on laptop](read_me/media/contact-page/contact-me-laptop.png)  
+  - [Contact page on mobile](read_me/media/contact-page/contact-me-mobile.PNG)  
+  - [Contact page on tablet](read_me/media/contact-page/contact-me-tablet.PNG)  
+  - [Contact page on laptop](read_me/media/contact-page/contact-me-laptop.PNG)  
 
 ---
 
