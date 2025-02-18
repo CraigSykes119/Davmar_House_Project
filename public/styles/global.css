@@ -135,7 +135,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #d8ad40;
+  background-color: #d8ad40 !important;
 }
 
 /* Welcome Section */
