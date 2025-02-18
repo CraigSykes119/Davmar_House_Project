@@ -27,17 +27,19 @@ Deployed Site: <https://craigsykes119.github.io/Davmar_House_Project/>
     - [🖼️ **Imagery**](#️-imagery)
     - [📐 **Wireframe \& Initial Design Planning**](#-wireframe--initial-design-planning)
     - [**✅ Why This Matters?**](#-why-this-matters-1)
-  - [Features](#features)
-    - [Navigation Bar](#navigation-bar)
-    - [Footer](#footer)
-    - [Home Page](#home-page)
-      - [Hero Image](#hero-image)
-      - [Meet Craig](#meet-craig)
-      - [My Passion](#my-passion)
-      - [Benefits of Gardening](#benefits-of-gardening)
-    - [Gallery Page](#gallery-page)
-      - [Gallery Image](#gallery-image)
-    - [Contact me Page](#contact-me-page)
+  - [🌟 Features](#-features)
+    - [🔖 Favicon](#-favicon)
+    - [📌 **Navigation Bar**](#-navigation-bar)
+    - [🔽 **Footer**](#-footer)
+  - [🏠 **Homepage**](#-homepage)
+    - [🎬 **Hero Section**](#-hero-section)
+  - [🛏️ **Rooms \& Rates**](#️-rooms--rates)
+  - [🖼️ **Gallery Page**](#️-gallery-page)
+  - [📍 **Nearby Attractions**](#-nearby-attractions)
+  - [🌦️ **Live Weather Widget**](#️-live-weather-widget)
+  - [📞 **Contact Page**](#-contact-page)
+  - [🚀 **Features to Implement in the Future**](#-features-to-implement-in-the-future)
+    - [**✅ Why This Matters?**](#-why-this-matters-2)
     - [Features to implement in the future](#features-to-implement-in-the-future)
     - [Accessability](#accessability)
   - [Technology](#technology)
@@ -229,127 +231,152 @@ The design choices **align with the guesthouse’s brand and customer expectatio
 ---
 
 
-## Features
+## 🌟 Features  
 
-- A favicon was added to give the website an easily identifiable icon to distinguish it on the tab bar.
+### 🔖 Favicon  
 
-![favicon for the website](read-me/media/web-favicon.png)
+A **favicon** has been added to ensure the website has an **easily identifiable icon** in the browser tab, improving **brand recognition**.  
 
-### Navigation Bar
+![Favicon for the website](read_me/media/web-favicon.png)  
 
-- The website's navigation bar is responsive, featuring a logo on the left and three anchor elements on the right. These anchors provide quick access to different pages on the website, such as the home page, the gallery page, and the contact me page. The navigation elements remain consistent across all pages, ensuring a seamless user experience.
+---
 
-- The user can easily identify where they are on the site by a line underneath the active page on the navigation bar.
-  
-![active page on the website](read-me/media/active-page.png)
+### 📌 **Navigation Bar**  
 
-- A hover effect was also incorporated to the navigation bar when the cursor hovers over the elements. A line will appear underneath the element and dissapear when moved off to indictae that this link is clickable.
+- The **responsive navigation bar** features the **Davmar House logo** on the left and anchor links on the right for easy access to key sections:  
+  ✅ **Gallery**  
+  ✅ **Rooms & Rates**  
+  ✅ **Nearby Attractions**  
+  ✅ **Contact Us**  
 
-![cursor interacting with navigation menu](read-me/media/nav-hover.png)
+- The **active page is highlighted** with an underline to provide **clear user feedback**.  
 
-- On devices with a screen size of less than 768px, most commonly on screens smaller than a tablet, the navigation menu responds by using the burger icon to save space and keep the integrity of the web design. This was created following the steps in the love running project.
+![Active page on the website](read_me/media/active-page.png)  
 
-![burger menu on smaller screens](read-me/media/nav-burger.png)
+- A **hover effect** enhances usability by indicating **clickable elements**.  
 
-- When the burger menu is clicked, it expands underneath the logo, then dissapears again after an option is clicked.
+![Cursor interacting with navigation menu](read_me/media/nav-hover.png)  
 
-![burger menu open on smaller screens](read-me/media/burger-open.png)
+- On **mobile screens (under 768px)**, the navigation menu **converts into a burger menu**, preserving the clean UI.  
 
-### Footer
+![Burger menu on smaller screens](read_me/media/nav-burger.png)  
 
-- The footer contains a title and four social media icons: Facebook, Instagram, Twitter (X) and YouTube. Each logo is clickable and will take the user to the relevant social media account.
+- When tapped, the **burger menu expands**, allowing users to navigate easily before collapsing again.  
 
-- The title gives context to the icons and also draws attention to the icons. It acts as a type of call to action.
+![Burger menu open on smaller screens](read_me/media/burger-open.png)  
 
-![footer](read-me/media/footer-icons.png)
+---
 
-### Home Page
+### 🔽 **Footer**  
 
-#### Hero Image
+- The footer includes:  
+  ✅ A **title** for branding.  
+  ✅ **Social media icons** for Facebook, Instagram, Twitter (X), and YouTube, which are **fully interactive**.  
 
-- The hero image is the first interaction the user will have with the website. The image is colourful and portrays a biodiverse garden in the summer. This image creates an emotional response by the user and indictaes impactfully what the website's purpose is.
-  
-- This is accompanied by cover text with a semi transparent background in the the top center of the hero image. The cover text consists of a qoute by Alfred Austin speaking of the joy of working in the garden. This qoute was sourced from [BrainyQoutes.com](https://www.brainyquote.com/quotes/alfred_austin_169801).
+- These icons **act as a call to action**, encouraging users to explore **Davmar House’s online presence**.  
 
-- Both the hero image and the cover text are fully responsive and adapt to various screen sizes.
+![Footer](read_me/media/footer-icons.png)  
 
-![hero image and cover text on mobile and desktop](read-me/media/home-page/hero-responsive.png)
+---
 
-#### Meet Craig
+## 🏠 **Homepage**  
 
-- The meet Craig consists of text and an image.The text gives an introduction to who Craig is and the image shows a visual as to what Craig looks like.
+### 🎬 **Hero Section**  
 
-- Both the text and the image are responsive and change layout depending on device. The image has an extra point of responsiveness as the border radius changes depending on screen size.
+- The **hero image** is the first interaction visitors have with the website. It:  
+  ✅ **Showcases the guesthouse and surrounding nature.**  
+  ✅ **Includes overlay text** to communicate the guesthouse’s welcoming atmosphere.  
+  ✅ **Features a CTA button** to encourage users to learn more.  
 
-- Both the hero image and the cover text are fully responsive and adapt to various screen sizes.
-  - [Meet Craig section on mobile](read-me/media/home-page/meet-craig-mobile.png)
-  - [Meet Craig section on tablet](read-me/media/home-page/meet-craig-tablet.png)
-  - [Meet Craig section on laptop](read-me/media/home-page/meet-craig-laptop.png)
+- The **hero image is fully responsive**, ensuring it displays correctly on all screen sizes.  
 
-#### My Passion
+![Hero image on mobile and desktop](read_me/media/home-page/hero-responsive.png)  
 
-- The My passion Section also consists of text and image, similar to Meet Craig. The text aims to explains Craig's motivation and what he intends to acheive through the website. The image shows a garden in full bloom, aiming to create a visual of what a garden could could look like. The image of the garden is from canva stock photos.
+---
 
-- The responsivness of this section follows a similar pattern to that of Meet Craig, however on larger screen, the order is reversed where the image is first and text second.
-  - [My Passion section on mobile](read-me/media/home-page/my-passion-mobile.png)
-  - [My Passion section on tablet](read-me/media/home-page/my-passion-tablet.png)
-  - [My Passion section on laptop](read-me/media/home-page/my-passion-laptop.png)
+## 🛏️ **Rooms & Rates**  
 
-- This creates a nice design as the two section reflect each other on larger screens.
+- The **Rooms & Rates page** provides:  
+  ✅ A **detailed overview** of available rooms.  
+  ✅ **Pricing information** and amenities included.  
+  ✅ **Responsive design** for easy browsing on any device.  
 
-![Meet Craig and My Passion on larger screens](read-me/media/home-page/craig-passion-together.png)
+---
 
-#### Benefits of Gardening
+## 🖼️ **Gallery Page**  
 
-- The benefits of gardening section consists of text and a video from YouTube. The text portrays that Craig was involved in a project that aimed at promoting mental health through gardening, and the video acts as social proof to the benefits of such a project.
+- The **interactive gallery** allows users to browse **images of Davmar House and its surroundings**.  
+- The page features:  
+  ✅ **A filterable grid** to view different areas of the guesthouse.  
+  ✅ **High-quality images** optimized for performance.  
 
-- The video offers the user full control with the ability to play, stop and all other controls associated with youTube videos. The link to the video on YouTube can be found [here](https://youtu.be/xC1hmFqC6e0?si=3zIAxWMuRDx2YRbI).
+![Gallery introduction](read_me/media/gallery-page/gallery-intro-response.png)  
 
-![Image of YouTube controls in benefits section](read-me/media/home-page/benefits-video-control.png)
+- The **fully responsive layout** ensures that images adapt to different screen sizes.  
 
-- Both the text and video are responsive in size and adapt accordingly to screen size.
-  - [Benefits of Gardening section on mobile](read-me/media/home-page/benefits-mobile.png)
-  - [Benefits of Gardening section on tablet](read-me/media/home-page/benefits-tablet.png)
-  - [Benefits of Gardening section on laptop](read-me/media/home-page/benefits-laptop.png)
+  - [Gallery on mobile](read_me/media/gallery-page/gallery-mobile.png)  
+  - [Gallery on tablet](read_me/media/gallery-page/gallery-tablet.png)  
+  - [Gallery on laptop](read_me/media/gallery-page/gallery-laptop.png)  
 
-### Gallery Page
+---
 
-- The gallery page contains all header and footer mentioned in this document.
+## 📍 **Nearby Attractions**  
 
-- The Gallery has a ttitle and an introduction text above the images. This is to give context to the user as to what the images are. The text is also fully responsive.
+- This page highlights **top local attractions**, including:  
+  ✅ Restaurants & pubs near Davmar House.  
+  ✅ Cultural and historical landmarks, such as **Blarney Castle**.  
+  ✅ Outdoor activities and places of interest.  
 
-![Image of gallery introduction on laptop and mobile](read-me/media/gallery-page/gallery-intro-response.png)
+- Each attraction has:  
+  ✅ A **high-resolution image or logo**.  
+  ✅ A **brief description** of what visitors can expect.  
+  ✅ **Links** for more details or navigation.  
 
-- The gallery consists of 16 sections, each consisting of one image and text underneath. The gallery portrays different gardens that Craig has worked on in Ireland. The page is fully responsive, adapting its rows and columns depending on screen size.
-  - [Gallery page on mobile](read-me/media/gallery-page/gallery-mobile.png)
-  - [Gallery page on tablet](read-me/media/gallery-page/gallery-tablet.png)
-  - [Gallery page on laptop](read-me/media/gallery-page/gallery-laptop.png)
+---
 
-#### Gallery Image
+## 🌦️ **Live Weather Widget**  
 
-- Each gallery is downloadable by the user. each image is also accompanied by text underneath giving the name and location of the garden they are viewing.
+- The **live weather widget** integrates with the **OpenWeatherMap API** to:  
+  ✅ Display **real-time weather updates** for Blarney.  
+  ✅ Provide **temperature, conditions, and forecasts**.  
+  ✅ Enhance **trip planning** for visitors.  
 
-![example of gallery image in gallery](read-me/media/gallery-page/gallery-image.png)
+![Weather widget](read_me/media/weather-widget.png)  
 
-- Each image is clickable and will bring the user to an external website relating to the garden where the user can find out more information.
+---
 
-![clickable link on each image](read-me/media/gallery-page/gallery-link.png)
+## 📞 **Contact Page**  
 
-### Contact me Page
+- The **contact form** allows users to:  
+  ✅ **Easily inquire** about room availability or general questions.  
+  ✅ **Enter their name, email, and message**.  
+  ✅ **Receive validation feedback** before submitting.  
 
-- The contact me page is aimed at taking the user into the real world and creating offline engagement. The form is fully responsive and adapts to various screen sizes. The page has a background image of a blurred out garden in order to create a feel of a garden without seeing it.
-  - [Contact Me page on mobile](read-me/media/contact-page/contact-me-mobile.png)
-  - [Contact Me page on tablet](read-me/media/contact-page/contact-me-tablet.png)
-  - [Contact Me page on laptop](read-me/media/contact-page/contact-me-laptop.png)
+- The **form is fully responsive** and adapts to different screen sizes.  
 
-- The contact me has an introductory title and text, aimed and offering a friendly tone and what the user can contact Craig about.
+  - [Contact page on mobile](read_me/media/contact-page/contact-me-mobile.png)  
+  - [Contact page on tablet](read_me/media/contact-page/contact-me-tablet.png)  
+  - [Contact page on laptop](read_me/media/contact-page/contact-me-laptop.png)  
 
-![Introduction text in contact me](read-me/media/contact-page/contact-me-intro.png)
+---
 
-- The contact form consists of inputs such as first name, last name, email address, gardening knowledge and message.
-  - The gardening knowledge is expressed through a slider in order to allow the user to not have to put too much thought and worry they may over exagerate their knowledge. The user can move the slider based on their own judgement between one and ten.
+## 🚀 **Features to Implement in the Future**  
 
-![Garden slider in contact me form](read-me/media/contact-page/contact-me-slider.png)
+Although this version of **Davmar House** is fully functional, future improvements may include:  
+
+✅ **Online Booking System** – Allow users to book rooms directly from the website.  
+✅ **Blog Section** – Share travel tips and recommendations for visiting Blarney.  
+✅ **Newsletter Subscription** – Let users sign up for exclusive offers and updates.  
+✅ **FAQ Section** – Address common questions about accommodation and services.  
+✅ **Event Listings** – Display local events happening near Davmar House.  
+
+---
+
+### **✅ Why This Matters?**  
+
+These features **enhance user experience, drive engagement, and improve functionality**, making **Davmar House a comprehensive and informative platform** for potential visitors.  
+
+---
 
 ### Features to implement in the future
 
