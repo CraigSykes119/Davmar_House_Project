@@ -215,7 +215,6 @@ body {
 
 .google-map {
   width: 100%;
-  max-width: 600px;
   height: 350px;
   border: 0;
   border-radius: 8px;

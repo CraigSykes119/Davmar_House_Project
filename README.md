@@ -646,9 +646,12 @@ The CSS stylesheet passed **without errors** through the [W3 CSS Validator](http
 The website was tested using **Google Lighthouse** for **performance, accessibility, and SEO optimization**.  
 
 
-- **[Lighthouse test for Home page](read-me/testing/lighthouse-homepage.png)**  
-- **[Lighthouse test for Gallery page](read-me/testing/lighthouse-gallery.png)**  
-- **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-contact-me.png)**  
+- **[Lighthouse test for Home page](read-me/testing/lighthouse-homepage.PNG)**  
+- **[Lighthouse test for Gallery page](read-me/testing/lighthouse-gallery.PNG)**  
+- **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-contact-me.PNG)** 
+- **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-rooms.PNG)**  
+- **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-nearby.PNG)**  
+
 
 ---
 
