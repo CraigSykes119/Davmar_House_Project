@@ -64,17 +64,10 @@ const { title, type, link, imgSrc } = Astro.props;
   }
 
   @media (max-width: 600px) {
-    .attraction-card {
-      aspect-ratio: 1 / 1; /* Makes it a square */
-      height: auto; /* Allow it to resize naturally */
-    }
-
     .attraction-image {
-      height: 50%; /* Image takes up half the card */
-    }
-
-    .attraction-info {
-      height: 50%; /* Text section takes up the other half */
-    }
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
   }
 </style>
