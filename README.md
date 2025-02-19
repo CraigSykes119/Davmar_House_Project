@@ -85,21 +85,15 @@ Deployed Site: <https://craigsykes119.github.io/Davmar_House_Project/>
     - [✅ **HTML Validation**](#-html-validation)
     - [✅ **CSS Validation**](#-css-validation)
   - [**🚀 Lighthouse Testing (Performance \& SEO)**](#-lighthouse-testing-performance--seo)
-  - [**♿ Accessibility Testing**](#-accessibility-testing)
-    - [**✅ Final Testing Summary**](#-final-testing-summary)
-    - [Bugs](#bugs)
-      - [Bug - logo Alignment](#bug---logo-alignment)
-      - [Solution](#solution)
-      - [Bug - Hover in Navigation Menu](#bug---hover-in-navigation-menu)
-      - [Solution](#solution-1)
-      - [Bug - Cover Text Alignment](#bug---cover-text-alignment)
-      - [Solution](#solution-2)
-      - [Bug - Contact me Background Image](#bug---contact-me-background-image)
-      - [Solution](#solution-3)
-  - [Credits](#credits)
-    - [Content](#content)
-    - [Code](#code)
-    - [Acknowledgements](#acknowledgements)
+  - [🛠️ Bugs \& Fixes](#️-bugs--fixes)
+    - [**Bug 1 - API Keys Not Working on Deployed Site**](#bug-1---api-keys-not-working-on-deployed-site)
+    - [**Bug 2 - Contact Form Not Displaying Success Message**](#bug-2---contact-form-not-displaying-success-message)
+    - [**Bug 3 - Weather Widget Not Displaying**](#bug-3---weather-widget-not-displaying)
+    - [**Bug 4 - Google Maps Not Showing**](#bug-4---google-maps-not-showing)
+    - [**Bug 5 - Some Images Not Loading on GitHub Pages (404 Errors)**](#bug-5---some-images-not-loading-on-github-pages-404-errors)
+    - [**Final Outcome**](#final-outcome)
+  - [🎖️ Credits](#️-credits)
+    - [**📸 Content**](#-content)
 
 ## 🏡 User Experience  
 
@@ -653,98 +647,105 @@ The website was tested using **Google Lighthouse** for **performance, accessibil
 - **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-nearby.PNG)**  
 
 
+--- 
+
+
+## 🛠️ Bugs & Fixes
+
+### **Bug 1 - API Keys Not Working on Deployed Site**
+**Description:**  
+- The Weather API and Google Maps API worked locally but **did not function after deployment** to GitHub Pages.  
+- `import.meta.env.PUBLIC_WEATHER_API_KEY` was returning `undefined`.  
+
+**Cause:**  
+- `.env` files are **not included** in GitHub Pages deployments, requiring **GitHub Actions secrets** instead.  
+
+**Solution:**  
+- Stored API keys securely in **GitHub Secrets**.  
+- Updated `deploy.yml` to pass environment variables correctly.  
+- Used Astro’s `define` in `config.mjs` to inject API keys dynamically.  
+
+✅ **Result:** API keys now load successfully on both local and deployed environments.
+
 ---
 
-## **♿ Accessibility Testing**  
-The site was tested for **compliance with WCAG 2.1 accessibility standards**:  
+### **Bug 2 - Contact Form Not Displaying Success Message**
+**Description:**  
+- After submitting the contact form, **no success message appeared**.  
+- The form submission did not provide feedback, leaving users uncertain if the message was sent.  
 
-✅ **Implemented Features:**  
-- **Semantic HTML elements** for a meaningful structure.  
-- **Alt text on all images** for screen readers.  
-- **Sufficient color contrast** for readability.  
-- **ARIA labels** for social icons and interactive elements.  
-- **Keyboard navigation fully functional** (users can navigate the site without a mouse).  
+**Cause:**  
+- Missing `event.preventDefault()` in the JavaScript handling the form submission.  
+- The success message logic was **not triggering correctly** due to incorrect `display` CSS settings.  
 
-✅ **Result:** The website **meets accessibility best practices** and ensures **an inclusive user experience**.
+**Solution:**  
+- Ensured the form was submitting correctly with an event listener.  
+- Added a hidden success message `<p class="success-message">Your message has been sent!</p>`.  
+- Updated the CSS to **correctly show the message** after form submission.  
+
+✅ **Result:** Contact form now **displays a success message** upon submission.
 
 ---
 
-### **✅ Final Testing Summary**  
-All pages and features were tested, validated, and optimized for:  
-- ✅ **Responsiveness** across devices.  
-- ✅ **Functionality & Interactivity** (Forms, APIs, Navigation).  
-- ✅ **Performance & SEO Optimization**.  
-- ✅ **Accessibility & Compliance with WCAG 2.1**.  
+### **Bug 3 - Weather Widget Not Displaying**
+**Description:**  
+- The Weather Widget component **was not fetching weather data** from OpenWeatherMap.  
+- Console logs showed `401 Unauthorized`.  
 
-🚀 **Davmar House is fully functional and ready for deployment!**  
+**Cause:**  
+- The API key was either **not properly loaded** from the environment or was **not passed correctly** in the fetch request.  
+
+**Solution:**  
+- Verified `import.meta.env.PUBLIC_WEATHER_API_KEY` was properly set.  
+- Fixed the `fetch` URL structure to correctly include the API key.  
+- Wrapped the `fetch` call inside an `async` function and added error handling.  
+
+✅ **Result:** The Weather Widget **now fetches and displays live weather data**.
+
+---
+
+### **Bug 4 - Google Maps Not Showing**
+**Description:**  
+- The embedded Google Map **did not appear** on the **Contact Us** page.  
+- The iframe `src` value was not being interpreted correctly in Astro.  
+
+**Cause:**  
+- The `src` attribute used `{googleMapsSrc}` which Astro did not properly evaluate.  
+
+**Solution:**  
+- Used **string interpolation** and ensured `src={googleMapsSrc}` was directly assigned.  
+- Verified the API key was **properly loaded** from the `.env` file.  
+
+✅ **Result:** Google Maps is now **displayed correctly** in the Contact section.
+
+---
+
+### **Bug 5 - Some Images Not Loading on GitHub Pages (404 Errors)**
+**Description:**  
+- Three images (`soba_logo.png`, `Tung_sing_logo.png`, `Costigans_logo.png`) **appeared correctly on local development** but **showed 404 errors after deployment**.  
+
+**Cause:**  
+- GitHub Pages **is case-sensitive**, but some image file names used different casing (`.PNG` vs `.png`).  
+- Astro **compiles static assets differently** in production, requiring correct paths.  
+
+**Solution:**  
+- Standardized all file names to lowercase (`.png`).  
+- Updated `<img src="">` references in `AttractionsGrid.astro` to use the correct casing.  
+
+✅ **Result:** All images **now display correctly** on both local and deployed environments.
+
+---
+
+### **Final Outcome**
+All of these bugs were fixed, **improving site performance, usability, and accessibility**. 🚀🎉
 
 
-### Bugs
+## 🎖️ Credits 
 
-#### Bug - logo Alignment
+### **📸 Content**
+- **Images Used for the Gallery**  
+  - [Lakes Hotel Killarney](https://www.lakehotelkillarney.ie/index.html)  
+  - [All Other Images](https://www.canva.com/)  
 
-Couldn't get the logo to align in the centre with the navigation menu
-
-![Logo alignment bug](read-me/bugs/logo-alignment-bug.png)
-
-#### Solution
-
-It seemed that aligning the logo to the baseline didn't effect it, but did alter the nev-menu, this seemed to be the cause of the issue. I removed the flex property used a fixed height and margin-bottom. This seemedto fix the issue.
-
-#### Bug - Hover in Navigation Menu
-
-Could not acheive the hover effect in the navigation menu
-
-#### Solution
-
-The px values and solid values were not entered, just the colour. This caused the hover effect to be invisible. Once those values were added, the effect performed as expected.
-
-#### Bug - Cover Text Alignment
-
-Struggled to get the cover text on the hero image to sit top-center across all devices.
-
-![cover text bug](read-me/bugs/cover-text-bug.png)
-
-#### Solution
-
-Instead of using a fixed px value, or using flex, I changed the css to left 50% and set top to 7%. The important addtion to this was “transform: translateX(-50%);”, which accounted for the size of the div.
-
-#### Bug - Contact me Background Image
-
-Background image would not cover the entire page on the contact me page, it was consistantly leaving white space at the bottom despite css rules.
-
-![contact me background bug](read-me/bugs/contactbg-bug.png)
-
-#### Solution
-
-After availing of the tutor service and speaking with other students on slack "RaneemYad_5P", I moved the id "contact-bg" from a div I had within the main element and attached it to the main element itself. I then removed the absolute positioning within that ID.
-
-## Credits
-
-### Content
-
-- Images used for the gallery can be found in these websites
-  - [Discover Ireland](https://www.discoverireland.ie/guides/summer-gardens-ireland)
-  - [Blarney Castle](https://lovetovisitireland.com/blarney-castle-visitors-guide-updated-2023/)
-  - [TripAdvisor](https://www.tripadvisor.ie/Attractions-g186591-Activities-c57-t58-Ireland.html)
-  - [The Independent](https://www.independent.ie/life/travel/ireland/top-10-irish-gardens-shane-fitzsimons-and-norrie-lalors-picks-to-put-a-spring-in-your-step/40269497.html)
-  - [All Other Images](https://www.canva.com/)
-
-- Other Content
-  - [Youtube Video](https://youtu.be/xC1hmFqC6e0?si=yYSvOq2iYZsWS0ub)
-  - [Cover Text Qoute](https://www.brainyquote.com/quotes/alfred_austin_169801)
-  - [Icons](https://fontawesome.com/)
-  - All copyright was written and edited by myself with the aid of ChatGPT.
-
-### Code
-
-- The header and footer were created following the steps in the Love Running project
-- Gallery was based off [this lesson](https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery) from W3 schools.
-- CSS for styling the contact me background image was helped by RaneemYad_5P on Slack
-- How to make the youtube video responsive was based off [tis video](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp)
-- Styling for the contact form was based off [this video](https://www.youtube.com/watch?v=gggB0Nq5vBk)
-
-### Acknowledgements
-
-- My mentor Excellence Ilesanmi.
-- The CI Slack community for inspiration and help when needed.
+**ICopy used for website**  
+  - [Davmar House current website](https://davmar-blarney.com/)
