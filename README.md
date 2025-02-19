@@ -206,8 +206,8 @@ The logo is used consistently across the website, appearing in the **header, foo
 The website makes **extensive use of high-quality imagery** to showcase **the guesthouse, its rooms, and the surrounding attractions**:  
 
 - **Hero Section:** A **large, full-width background image** introduces visitors to Davmar House.  
-- **Rooms & Rates:** High-resolution images depict **room interiors**.  
-- **Gallery:** A **filterable image grid** allows users to browse different areas of the guesthouse.  
+- **Rooms & Rates:** High-resolution images depict **room styles**.  
+- **Gallery:** A **filterable image grid** allows users to browse different rooms in detail of the guesthouse.  
 - **Nearby Attractions:** Logos and images of **local places of interest** (e.g., Blarney Castle, restaurants, and pubs).  
 - **Weather Widget & Maps:** **Icons and visuals** are used for better engagement.  
 
@@ -306,7 +306,7 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
 
 - The **hero image is fully responsive**, ensuring it displays correctly on all screen sizes.  
 
-![Hero image on mobile and desktop](read_me/media/hero-responsive.PNG)  
+![Hero image on mobile and desktop](read_me/media/hero-responsive.png)  
 
 ---
 
@@ -631,7 +631,7 @@ All pages have passed without errors through the [W3 HTML Validator](https://val
 ### ✅ **CSS Validation**  
 The CSS stylesheet passed **without errors** through the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/).  
 
-![CSS Validator Passed](read_me/testing/css-valid.png)  
+![CSS Validator Passed](read_me/testing/css-valid.PNG)  
 
 ---
 
@@ -643,8 +643,8 @@ The website was tested using **Google Lighthouse** for **performance, accessibil
 - **[Lighthouse test for Home page](read_me/testing/lighthouse-homepage.PNG)**  
 - **[Lighthouse test for Gallery page](read_me/testing/lighthouse-gallery.PNG)**  
 - **[Lighthouse test for Contact Me page](read_me/testing/lighthouse-contact-me.PNG)** 
-- **[Lighthouse test for Contact Me page](read_me/testing/lighthouse-rooms.PNG)**  
-- **[Lighthouse test for Contact Me page](read_me/testing/lighthouse-nearby.PNG)**  
+- **[Lighthouse test for Rooms page](read_me/testing/lighthouse-rooms.PNG)**  
+- **[Lighthouse test for Nearby Attractions page](read_me/testing/lighthouse-nearby.PNG)**  
 
 
 --- 
