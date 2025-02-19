@@ -62,4 +62,19 @@ const { title, type, link, imgSrc } = Astro.props;
   .learn-more:hover {
     background-color: #0e5b2e;
   }
+
+  @media (max-width: 600px) {
+    .attraction-card {
+      aspect-ratio: 1 / 1; /* Makes it a square */
+      height: auto; /* Allow it to resize naturally */
+    }
+
+    .attraction-image {
+      height: 50%; /* Image takes up half the card */
+    }
+
+    .attraction-info {
+      height: 50%; /* Text section takes up the other half */
+    }
+  }
 </style>
