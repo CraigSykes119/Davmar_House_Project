@@ -645,11 +645,6 @@ The CSS stylesheet passed **without errors** through the [W3 CSS Validator](http
 
 The website was tested using **Google Lighthouse** for **performance, accessibility, and SEO optimization**.  
 
-✅ **Results:**  
-- **Performance:** **90+** across pages.  
-- **Accessibility:** **100%** across all pages.  
-- **Best Practices:** **90+** across all pages.  
-- **SEO:** **Achieved an optimal score of 90+** after implementing recommended improvements.
 
 - **[Lighthouse test for Home page](read-me/testing/lighthouse-homepage.png)**  
 - **[Lighthouse test for Gallery page](read-me/testing/lighthouse-gallery.png)**  
