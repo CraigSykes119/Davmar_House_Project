@@ -26,25 +26,15 @@ const googleMapsSrc = `https://www.google.com/maps/embed/v1/place?key=${import.m
     <!-- Google Maps Embed -->
     <div class="map-container">
         <iframe
-          width="100%"
+          class="google-map"
           height="350"
-          frameborder="0"
           style="border:0; border-radius: 8px;"
           allowfullscreen
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          src={googleMapsSrc}>
+          src="{googleMapsSrc}">
         </iframe>
     </div>
+    
   </section>
-
-  <style>
-    .contact-details {
-      margin-top: 20px;
-      padding: 20px;
-      background: #f5f5f5;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
 </Layout>

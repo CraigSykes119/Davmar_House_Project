@@ -327,6 +327,20 @@ body {
   margin-bottom: 2rem;
 }
 
+/* ContactMe Page */
+.contact-details {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.google-map {
+  width: 100%; /* Now applied via CSS */
+  max-width: 100%; /* Ensures it stays within container */
+  display: block; /* Avoids extra space below */
+}
+
 /* Footer */
 .footer {
   background-color: #12763e;
