@@ -306,7 +306,7 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
 
 - The **hero image is fully responsive**, ensuring it displays correctly on all screen sizes.  
 
-![Hero image on mobile and desktop](read_me/media/home-page/hero-responsive.PNG)  
+![Hero image on mobile and desktop](read_me/media/hero-responsive.PNG)  
 
 ---
 
@@ -326,13 +326,13 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
   ✅ **A filterable grid** to view different areas of the guesthouse.  
   ✅ **High-quality images** optimized for performance.  
 
-![Gallery introduction](read_me/media/gallery-page/gallery-intro-response.PNG)  
+![Gallery introduction](read_me/media/gallery-intro-response.PNG)  
 
 - The **fully responsive layout** ensures that images adapt to different screen sizes.  
 
-  - [Gallery on mobile](read_me/media/gallery-page/gallery-mobile.PNG)  
-  - [Gallery on tablet](read_me/media/gallery-page/gallery-tablet.PNG)  
-  - [Gallery on laptop](read_me/media/gallery-page/gallery-laptop.PNG)  
+  - [Gallery on mobile](read_me/media/gallery-mobile.PNG)  
+  - [Gallery on tablet](read_me/media/gallery-tablet.PNG)  
+  - [Gallery on laptop](read_me/media/gallery-laptop.PNG)  
 
 ---
 
@@ -371,9 +371,9 @@ A **favicon** has been added to ensure the website has an **easily identifiable 
 
 - The **form is fully responsive** and adapts to different screen sizes.  
 
-  - [Contact page on mobile](read_me/media/contact-page/contact-me-mobile.PNG)  
-  - [Contact page on tablet](read_me/media/contact-page/contact-me-tablet.PNG)  
-  - [Contact page on laptop](read_me/media/contact-page/contact-me-laptop.PNG)  
+  - [Contact page on mobile](read_me/media/contact-me-mobile.PNG)  
+  - [Contact page on tablet](read_me/media/contact-me-tablet.PNG)  
+  - [Contact page on laptop](read_me/media/contact-me-laptop.PNG)  
 
 ---
 
@@ -579,9 +579,9 @@ The site was tested successfully on the following **major web browsers**:
 ### **📱 Cross-Device Testing**  
 Using **Google Developer Tools** and real devices, the website was tested on various screen sizes:  
 
-- 📱 **[Galaxy Z Fold 5](read-me/testing/test-galaxy-fold.PNG)**  
-- 📱 **[iPad Air](read-me/testing/test-pad-air.PNG)**  
-- 💻 **[My personal laptop](read-me/testing/test-personal-laptop.PNG)**  
+- 📱 **[Galaxy Z Fold 5](read_me/testing/test-galaxy-fold.PNG)**  
+- 📱 **[iPad Air](read_me/testing/test-pad-air.PNG)**  
+- 💻 **[My personal laptop](read_me/testing/test-personal-laptop.PNG)**  
 
 ✅ **Result:** The site remains **fully responsive**, with no broken layouts or misalignment issues.
 
@@ -622,16 +622,16 @@ The following **core functionalities** were manually tested:
 ### ✅ **HTML Validation**  
 All pages have passed without errors through the [W3 HTML Validator](https://validator.w3.org/).  
 
-![HTML Validator Passed](read-me/testing/html-home-valid.PNG)
-![HTML Validator Passed](read-me/testing/html-gallery-valid.PNG) 
-![HTML Validator Passed](read-me/testing/html-contact-valid.PNG) 
-![HTML Validator Passed](read-me/testing/html-nearby-valid.PNG) 
-![HTML Validator Passed](read-me/testing/html-rooms-valid.PNG)  
+![HTML Validator Passed](read_me/testing/html-home-valid.PNG)
+![HTML Validator Passed](read_me/testing/html-gallery-valid.PNG) 
+![HTML Validator Passed](read_me/testing/html-contact-valid.PNG) 
+![HTML Validator Passed](read_me/testing/html-nearby-valid.PNG) 
+![HTML Validator Passed](read_me/testing/html-rooms-valid.PNG)  
 
 ### ✅ **CSS Validation**  
 The CSS stylesheet passed **without errors** through the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/).  
 
-![CSS Validator Passed](read-me/testing/css-valid.png)  
+![CSS Validator Passed](read_me/testing/css-valid.png)  
 
 ---
 
@@ -640,11 +640,11 @@ The CSS stylesheet passed **without errors** through the [W3 CSS Validator](http
 The website was tested using **Google Lighthouse** for **performance, accessibility, and SEO optimization**.  
 
 
-- **[Lighthouse test for Home page](read-me/testing/lighthouse-homepage.PNG)**  
-- **[Lighthouse test for Gallery page](read-me/testing/lighthouse-gallery.PNG)**  
-- **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-contact-me.PNG)** 
-- **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-rooms.PNG)**  
-- **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-nearby.PNG)**  
+- **[Lighthouse test for Home page](read_me/testing/lighthouse-homepage.PNG)**  
+- **[Lighthouse test for Gallery page](read_me/testing/lighthouse-gallery.PNG)**  
+- **[Lighthouse test for Contact Me page](read_me/testing/lighthouse-contact-me.PNG)** 
+- **[Lighthouse test for Contact Me page](read_me/testing/lighthouse-rooms.PNG)**  
+- **[Lighthouse test for Contact Me page](read_me/testing/lighthouse-nearby.PNG)**  
 
 
 --- 
