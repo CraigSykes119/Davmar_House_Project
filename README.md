@@ -585,9 +585,9 @@ The site was tested successfully on the following **major web browsers**:
 ### **📱 Cross-Device Testing**  
 Using **Google Developer Tools** and real devices, the website was tested on various screen sizes:  
 
-- 📱 **[Galaxy Z Fold 5](read-me/testing/test-galaxy-fold.png)**  
-- 📱 **[iPad Air](read-me/testing/test-pad-air.png)**  
-- 💻 **[My personal laptop](read-me/testing/test-personal-laptop.png)**  
+- 📱 **[Galaxy Z Fold 5](read-me/testing/test-galaxy-fold.PNG)**  
+- 📱 **[iPad Air](read-me/testing/test-pad-air.PNG)**  
+- 💻 **[My personal laptop](read-me/testing/test-personal-laptop.PNG)**  
 
 ✅ **Result:** The site remains **fully responsive**, with no broken layouts or misalignment issues.
 
@@ -628,11 +628,11 @@ The following **core functionalities** were manually tested:
 ### ✅ **HTML Validation**  
 All pages have passed without errors through the [W3 HTML Validator](https://validator.w3.org/).  
 
-![HTML Validator Passed](read-me/testing/html-home-valid.png)
-![HTML Validator Passed](read-me/testing/html-gallery-valid.png) 
-![HTML Validator Passed](read-me/testing/html-contact-valid.png) 
-![HTML Validator Passed](read-me/testing/html-nearby-valid.png) 
-![HTML Validator Passed](read-me/testing/html-rooms-valid.png)  
+![HTML Validator Passed](read-me/testing/html-home-valid.PNG)
+![HTML Validator Passed](read-me/testing/html-gallery-valid.PNG) 
+![HTML Validator Passed](read-me/testing/html-contact-valid.PNG) 
+![HTML Validator Passed](read-me/testing/html-nearby-valid.PNG) 
+![HTML Validator Passed](read-me/testing/html-rooms-valid.PNG)  
 
 ### ✅ **CSS Validation**  
 The CSS stylesheet passed **without errors** through the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/).  

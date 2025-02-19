@@ -1,6 +1,6 @@
 
 :root {
-  --bs-primary: #12763e; /* Deep green */
+  --bs-primary: #12763e; 
 }
 
 body {
@@ -10,8 +10,8 @@ body {
 
 /* Navbar */
 .custom-navbar {
-  background-color: var(--bs-primary) !important; /* Dark green background */
-  padding: 10px 0; /* Adds spacing */
+  background-color: var(--bs-primary) !important; 
+  padding: 5px 0; 
 }
 
 /* Navbar Brand & Links */
@@ -47,9 +47,6 @@ body {
   transform: scale(1.05);
 }
 
-.custom-navbar {
-  padding: 5px 0;
-}
 
 /* Hero Section */
 .hero {
@@ -336,9 +333,8 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 .google-map {
-  width: 100%; /* Now applied via CSS */
-  max-width: 100%; /* Ensures it stays within container */
-  display: block; /* Avoids extra space below */
+  width: 100%; 
+  display: block; 
 }
 
 /* Footer */
@@ -444,10 +440,6 @@ body {
   .footer-text {
     font-size: 0.8rem;
     padding: 10px;
-  }
-  .hero {
-    height: 70vh; /* Limit height to 70% of the viewport */
-    max-height: 500px; /* Prevents it from being too tall */
   }
   .hero {
     height: 70vh;
