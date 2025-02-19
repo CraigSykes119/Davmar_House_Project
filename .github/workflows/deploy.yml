@@ -25,13 +25,13 @@ jobs:
       - name: Install, build, and upload site
         uses: withastro/action@v3
         with:
-          path: . # The root location of your Astro project
+          path: . 
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages-${{ github.run_id }}
-          path: dist  # Update to match your Astro build output directory
+          path: dist  
 
   deploy:
     needs: build

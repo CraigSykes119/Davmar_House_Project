@@ -1,12 +1,11 @@
 export async function POST({ request }: { request: Request }) {
-  console.log("🔹 Contact API Route Called"); // Debugging log
+  console.log("🔹 Contact API Route Called"); 
 
   const apiKey = import.meta.env.PUBLIC_BREVO_API_KEY;
   const senderEmail = import.meta.env.SENDER_EMAIL;
   const senderName = import.meta.env.SENDER_NAME;
   const recipientEmail = import.meta.env.RECIPIENT_EMAIL;
 
-  // Debugging logs to check if env variables are loading correctly
   console.log("🔹 API Key Loaded:", !!apiKey);
   console.log("🔹 Sender Email:", senderEmail);
   console.log("🔹 Recipient Email:", recipientEmail);
@@ -25,9 +24,8 @@ export async function POST({ request }: { request: Request }) {
 
     const { name, email, country, telephone, message } = formData;
 
-    // Construct email content
     const emailContent = {
-      sender: { name: senderName, email: senderEmail }, // Sender must be verified in Brevo
+      sender: { name: senderName, email: senderEmail }, 
       to: [{ email: recipientEmail, name: "Davmar House Admin" }],
       subject: "New Contact Form Submission - Davmar House",
       htmlContent: `

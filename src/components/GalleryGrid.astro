@@ -13,7 +13,6 @@ import "lightgallery/css/lg-zoom.css";
     <button class="filter-btn" data-filter="suite">Suite Room</button>
   </div>
 
-  <!-- Image Grid -->
   <div id="lightgallery" class="lightgallery">
     <!-- Standard Room Section -->
     <a href="/Davmar_House_Project/gallery_images/StandardRoom1.jpg" class="gallery-item standard">
@@ -109,14 +108,12 @@ import "lightgallery/css/lg-zoom.css";
 
     filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
-        // Remove active class from all buttons
         filterButtons.forEach((button) => button.classList.remove("active"));
         btn.classList.add("active");
 
-        const filter = btn.getAttribute("data-filter") || "all"; // Ensure it's always a string
-
+        const filter = btn.getAttribute("data-filter") || "all"; 
         galleryItems.forEach((item) => {
-          if (item instanceof HTMLElement) { // Ensure item is an HTMLElement
+          if (item instanceof HTMLElement) { 
             if (filter === "all" || item.classList.contains(filter)) {
               item.style.display = "block";
             } else {
@@ -129,14 +126,12 @@ import "lightgallery/css/lg-zoom.css";
   });
 </script>
 
-<!-- Styles -->
 <style>
   .gallery {
     text-align: center;
     margin: 3rem 0;
   }
 
-  /* Filter Buttons */
   .gallery-filters {
     margin-bottom: 20px;
   }
@@ -156,7 +151,6 @@ import "lightgallery/css/lg-zoom.css";
     background-color: #d8ad40;
   }
 
-  /* LightGallery Grid */
   .lightgallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

@@ -22,7 +22,7 @@ const { title, type, link, imgSrc } = Astro.props;
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensures all cards stretch equally */
+    height: 100%; 
   }
 
   .attraction-card:hover {
@@ -37,17 +37,16 @@ const { title, type, link, imgSrc } = Astro.props;
 
   .attraction-info {
     padding: 15px;
-    flex-grow: 1; /* Allows text section to expand as needed */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes button to bottom */
+    justify-content: space-between; 
   }
 
   .attraction-type {
     color: #12763e;
     font-weight: bold;
-    margin-bottom: 10px; /* Ensure spacing */
-  }
+    margin-bottom: 10px; 
 
   .learn-more {
     display: inline-block;
@@ -56,8 +55,7 @@ const { title, type, link, imgSrc } = Astro.props;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: auto; /* Ensures alignment at bottom */
-  }
+    margin-top: auto; 
 
   .learn-more:hover {
     background-color: #0e5b2e;

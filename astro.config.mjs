@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import dotenv from "dotenv";
 
-dotenv.config(); // Load environment variables
+dotenv.config();
 
 export default defineConfig({
   site: "https://CraigSykes119.github.io/Davmar_House_Project",

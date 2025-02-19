@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AttractionsGrid from '../components/AttractionsGrid.astro';
-import WeatherWidget from '../components/WeatherWidget.astro'; // Import the Weather Widget
+import WeatherWidget from '../components/WeatherWidget.astro'; 
 
 console.log("🔍 Full Environment Object:", import.meta.env);
 console.log("🌍 Weather API Key:", import.meta.env.PUBLIC_WEATHER_API_KEY);
@@ -13,7 +13,7 @@ console.log("🗺️ Google Maps API Key:", import.meta.env.PUBLIC_GOOGLE_MAPS_A
     <h1>Nearby Attractions</h1>
     <p>Discover the best bars, restaurants, takeaways, and activities near Davmar House.</p>
 
-    <WeatherWidget /> <!-- Add the Weather Widget here -->
+    <WeatherWidget /> 
 
     <AttractionsGrid />
   </section>

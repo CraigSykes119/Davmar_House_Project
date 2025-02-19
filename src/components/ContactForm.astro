@@ -34,7 +34,6 @@
 </form>
 
 <style>
-/* Form Styling */
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -55,7 +54,6 @@
   margin-bottom: 5px;
 }
 
-/* Input and Textarea Styling */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -72,7 +70,6 @@
   box-shadow: 0 0 5px rgba(18, 118, 62, 0.5);
 }
 
-/* Error Messages */
 .error-message {
   color: red;
   font-size: 0.85rem;
@@ -80,7 +77,6 @@
   display: block;
 }
 
-/* Submit Button Styling */
 .contact-form .submit-btn {
   background-color: #12763e;
   color: white;
@@ -96,7 +92,6 @@
   background-color: #0e5b2e;
 }
 
-/* Response Message */
 .response-message {
   margin-top: 1rem;
   font-weight: bold;
@@ -171,7 +166,7 @@
       const isMessageValid = validateInput(messageInput, messageError, null, 1); // ✅ Must have at least 1 character
   
       if (!isNameValid || !isEmailValid || !isCountryValid || !isTelephoneValid || !isMessageValid) {
-        return; // Stop form submission if validation fails
+        return; 
       }
   
       // Show success message
