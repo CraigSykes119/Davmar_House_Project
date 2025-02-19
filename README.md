@@ -41,30 +41,52 @@ Deployed Site: <https://craigsykes119.github.io/Davmar_House_Project/>
   - [📞 **Contact Page**](#-contact-page)
   - [🚀 **Features to Implement in the Future**](#-features-to-implement-in-the-future)
     - [**✅ Why This Matters?**](#-why-this-matters-2)
-    - [Accessability](#accessability)
-  - [Technology](#technology)
-    - [Languages](#languages)
-    - [Frameworks, libraries and programs used](#frameworks-libraries-and-programs-used)
+  - [♿ Accessibility](#-accessibility)
+    - [✅ **Semantic HTML Structure**](#-semantic-html-structure)
+    - [🖼️ **Alternative Text for Images**](#️-alternative-text-for-images)
+    - [🎤 **ARIA Attributes for Enhanced Accessibility**](#-aria-attributes-for-enhanced-accessibility)
+    - [🎨 **Color Contrast \& Readability**](#-color-contrast--readability)
+    - [📱 **Responsive \& Mobile-Friendly Design**](#-responsive--mobile-friendly-design)
+  - [🛠️ Technology](#️-technology)
+    - [**🖥️ Languages**](#️-languages)
+    - [**📦 Frameworks, Libraries \& Tools**](#-frameworks-libraries--tools)
+      - [Astro](#astro)
+      - [Bootstrap](#bootstrap)
+      - [Swiper.js](#swiperjs)
       - [Google Fonts](#google-fonts)
+      - [Font Awesome](#font-awesome)
       - [Favicon.io](#faviconio)
+      - [TinyPNG](#tinypng)
+      - [OpenWeatherMap API](#openweathermap-api)
+      - [Google Maps API](#google-maps-api)
+      - [Git](#git)
+      - [GitHub](#github)
+      - [GitHub Pages](#github-pages)
+      - [Lighthouse](#lighthouse)
+      - [Am I Responsive](#am-i-responsive)
       - [Canva](#canva)
       - [ChatGPT](#chatgpt)
-      - [TinyPNG](#tinypng)
+      - [VS Code](#vs-code)
       - [RGBA Color Picker](#rgba-color-picker)
-      - [CodeAnywhere](#codeanywhere)
-      - [GitHub](#github)
-      - [Git](#git)
-      - [Am I Responsive](#am-i-responsive)
-      - [Fonts Awesome](#fonts-awesome)
-  - [Deployment](#deployment)
-    - [GitHub Pages](#github-pages)
-    - [Forking the GitHub Repository](#forking-the-github-repository)
-    - [Making a Local Clone](#making-a-local-clone)
-  - [Testing](#testing)
-    - [Validator Testing](#validator-testing)
-      - [HTML](#html)
-      - [CSS](#css)
-      - [Lighthouse Testing](#lighthouse-testing)
+  - [🚀 Deployment](#-deployment)
+    - [**📌 Deployment to GitHub Pages (Using GitHub Actions)**](#-deployment-to-github-pages-using-github-actions)
+    - [**🔄 How the Deployment Works (GitHub Actions)**](#-how-the-deployment-works-github-actions)
+  - [**📥 Forking the Repository**](#-forking-the-repository)
+    - [**Steps to Fork the Repository:**](#steps-to-fork-the-repository)
+  - [**💻 Cloning the Repository Locally**](#-cloning-the-repository-locally)
+  - [🧪 Testing](#-testing)
+    - [**🌍 Cross-Browser Testing**](#-cross-browser-testing)
+    - [**📱 Cross-Device Testing**](#-cross-device-testing)
+  - [**🛠️ Manual Testing**](#️-manual-testing)
+    - [✅ **Navigation**](#-navigation)
+    - [✅ **Footer**](#-footer-1)
+    - [✅ **Forms \& Interactive Elements**](#-forms--interactive-elements)
+  - [**📜 Validator Testing**](#-validator-testing)
+    - [✅ **HTML Validation**](#-html-validation)
+    - [✅ **CSS Validation**](#-css-validation)
+  - [**🚀 Lighthouse Testing (Performance \& SEO)**](#-lighthouse-testing-performance--seo)
+  - [**♿ Accessibility Testing**](#-accessibility-testing)
+    - [**✅ Final Testing Summary**](#-final-testing-summary)
     - [Bugs](#bugs)
       - [Bug - logo Alignment](#bug---logo-alignment)
       - [Solution](#solution)
@@ -381,153 +403,283 @@ These features **enhance user experience, drive engagement, and improve function
 
 ---
 
-### Accessability
+## ♿ Accessibility  
 
-- The following features have been incorporated in order to ensure the website is accessable.
-  - Semantic HTML elements have been used to provide a clear and meaningful structure to the website.
-  - Alt tags have been included in all images across the website.
-  - Aria labels have been included in the social icons in the footer.
-  - All images in gallery have been accompanied by relative text.
-  - Used sufficent colour contrast to ensure readability.
+Ensuring **Davmar House** is **accessible to all users** is a key priority. The following features have been implemented to **enhance usability, readability, and navigation**:  
 
-## Technology
+### ✅ **Semantic HTML Structure**  
+- **Proper use of headings (`<h1>` to `<h6>`)** to create a **logical page hierarchy**.  
+- **Landmark elements** (`<header>`, `<nav>`, `<main>`, `<footer>`) provide clear **structural meaning** to screen readers.  
 
-Throughout this project, the following technologies were used.
+### 🖼️ **Alternative Text for Images**  
+- **All images include descriptive `alt` attributes** to provide context for visually impaired users.  
+- **Gallery images** are accompanied by **meaningful captions** for additional clarity.  
 
-### Languages
+### 🎤 **ARIA Attributes for Enhanced Accessibility**  
+- **ARIA labels** are implemented for **social media icons** in the footer, allowing screen readers to interpret them correctly.  
+- **Interactive elements** (buttons, forms, navigation links) are assigned **ARIA roles and labels** where necessary.  
 
-- HTML
-- CSS
+### 🎨 **Color Contrast & Readability**  
+- **Sufficient color contrast** has been maintained between text and background for **better readability**.  
+- The **green (#12763e) and gold (#d4af37) accents** were chosen to be visually appealing while **complying with WCAG 2.1 contrast guidelines**.    
 
-### Frameworks, libraries and programs used
+### 📱 **Responsive & Mobile-Friendly Design**  
+- The website is fully **responsive**, adapting to different screen sizes and device orientations.  
+- **Font sizes** and interactive elements maintain **usability on touch devices**.  
 
-#### [Google Fonts](https://fonts.google.com/)
+---
 
-- Google fonts was used to incorporate the fonts used on the website
 
-#### [Favicon.io](https://favicon.io/favicon-converter/)
 
-- favicon.io was used to create the various favicon files used in this website
+## 🛠️ Technology  
 
-#### [Canva](https://www.canva.com/)
+Throughout this project, the following technologies were used:  
 
-- Canva was used to create graphics used in this read me and throught the website such as the logo.
-- Canva stock was used for the hero image, meet craig image, my passion image and the background image of the contact page.
+---
 
-#### [ChatGPT](https://chat.openai.com/)
+### **🖥️ Languages**  
 
-- ChatGPT was used to review text to ensure spelling and grammar was correct.
+- **HTML** – Used for structuring content.  
+- **CSS** – Used for styling and responsive design.  
+- **JavaScript** – Used for interactive elements and API integrations.  
 
-#### [TinyPNG](https://tinypng.com/)
+---
 
-- TinyPNG was used to compress images and convert them to .webp
+### **📦 Frameworks, Libraries & Tools**  
 
-#### [RGBA Color Picker](https://rgbacolorpicker.com/)
+#### [Astro](https://astro.build/)  
+- The **main framework** used for building the static website.  
+- Provides **fast performance and modular components**.  
 
-- RGBA color picker was used to identify primary colours for the website's design.
+#### [Bootstrap](https://getbootstrap.com/)  
+- Used for **responsive layout and styling**.  
+- Includes **pre-built UI components** such as buttons, grids, and forms.  
 
-#### [CodeAnywhere](<https://codeanywhere.com/>)
+#### [Swiper.js](https://swiperjs.com/)  
+- Used for the **responsive hero image slider**.  
+- Provides **smooth animations and touch support**.  
 
-- CodeAnywhere was used to edit and write the code.
+#### [Google Fonts](https://fonts.google.com/)  
+- Used to incorporate **Lato and Roboto** fonts for typography.  
 
-#### [GitHub](https://github.com/)
+#### [Font Awesome](https://fontawesome.com/)  
+- Used for **icons in the footer and navigation**.  
 
-- GitHub was used as a repository for the code.
+#### [Favicon.io](https://favicon.io/favicon-converter/)  
+- Used to create **the favicon for browser tabs**.  
 
-#### [Git](https://git-scm.com/)
+#### [TinyPNG](https://tinypng.com/)  
+- Used to **compress images** and convert them to `.webp` format for better performance.  
 
-- Git was used for version control by utilizing the command line terminal in CodeAnywhere to commit to Git and Push to GitHub.
+#### [OpenWeatherMap API](https://openweathermap.org/api)  
+- Used for the **live weather widget**.  
+- Provides **real-time weather updates for Blarney**.  
 
-#### [Am I Responsive](https://ui.dev/amiresponsive?url=https://craigs119.github.io/Craigs-Plants-P1/index.html)
+#### [Google Maps API](https://developers.google.com/maps)  
+- Used for **embedding an interactive map**.  
+- Helps users find **Davmar House’s location** easily.  
 
-- Am I Responsive was used to check the website on various screens and create graphic in the introduction to this readme.
+#### [Git](https://git-scm.com/)  
+- Used for **version control** and tracking changes.  
+- **Command line terminal** used for committing and pushing updates.  
 
-#### [Fonts Awesome](https://fontawesome.com/)
+#### [GitHub](https://github.com/)  
+- Used as a **repository** for storing and managing the project code.  
+- GitHub Actions used for **continuous deployment** to GitHub Pages.  
 
-## Deployment
+#### [GitHub Pages](https://pages.github.com/)  
+- Used for **deploying the website live**.  
+- Ensures the site is **accessible from anywhere**.  
 
-### GitHub Pages
+#### [Lighthouse](https://developers.google.com/web/tools/lighthouse)  
+- Used for **testing site performance, SEO, and accessibility**.  
+- Helped improve **page speed and best practices compliance**.  
 
-The project was deployed to GitHub Pages using the following steps...
+#### [Am I Responsive](https://ui.dev/amiresponsive/)  
+- Used to check **website responsiveness on different screen sizes**.  
+- Helped ensure **mobile-friendliness**.  
 
-1. Log in to GitHub and locate [Craigs-Plants-P1 Repository](https://github.com/CraigS119/Craigs-Plants-P1)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://craigs119.github.io/Craigs-Plants-P1/index.html) in the "GitHub Pages" section.
+#### [Canva](https://www.canva.com/)  
+- Used to **design the logo and graphics**.  
+- Provided **stock images for the homepage hero section**.  
 
-### Forking the GitHub Repository
+#### [ChatGPT](https://chat.openai.com/)  
+- Used for **reviewing text, improving grammar, and debugging code**.  
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+#### [VS Code](https://code.visualstudio.com/)  
+- Used as the **primary code editor** for development.  
+- Extensions such as **Prettier & ESLint** used for **code formatting**.  
 
-1. Log in to GitHub and locate the [Craigs-Plants-P1 Repository](https://github.com/CraigS119/Craigs-Plants-P1)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+#### [RGBA Color Picker](https://rgbacolorpicker.com/)  
+- Used for **choosing and refining the color scheme**.  
 
-### Making a Local Clone
+---
 
-1. Log in to GitHub and locate the [Craigs-Plants-P1 Repository](https://github.com/CraigS119/Craigs-Plants-P1)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
 
-```
-git clone https://github.com/CraigS119/Craigs-Plants-P1
-```
+## 🚀 Deployment  
 
-7. Press Enter. Your local clone will be created.
+The **Davmar House** website is deployed using **GitHub Pages** with **GitHub Actions for continuous deployment**. This ensures that every time changes are pushed to the repository, the website is automatically built and updated.
 
-```
-$ git clone https://github.com/CraigS119/Craigs-Plants-P1
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
+---
 
-## Testing
+### **📌 Deployment to GitHub Pages (Using GitHub Actions)**  
 
-- Site was tested with no issues on various different browsers:
-  - Google Chrome
-  - Microsoft Edge
-  - Safari
+The project is deployed to **GitHub Pages** via **GitHub Actions**, following these steps:  
 
-- Site was tested on various devices using the Google developer Tool:
-  - [Galaxy Fold](read-me/testing/test-galaxy-fold.png)
-  - [Ipad Air](read-me/testing/test-pad-air.png)
-  - [My personal laptop](read-me/testing/test-personal-laptop.png)
+1. Log in to **GitHub** and navigate to the **[Davmar House Repository](https://github.com/CraigSykes119/Davmar_House_Project)**.  
+2. Click on the **Settings** tab in the repository.  
+3. Scroll down to the **Pages** section (under "Code and Automation").  
+4. Under **Branch**, select `"gh-pages"` from the dropdown.  
+5. The page will refresh, and the deployed site will be available at:  
+   **[https://CraigSykes119.github.io/Davmar_House_Project](https://CraigSykes119.github.io/Davmar_House_Project)**.  
 
-- Manual Testing of site
-  - Links in navbar bring user to expected destination
-  - Links in footer bring user to expected destination
-  - Embedded YouTube video functions as expected
-  - Sign up form submits successfully
+### **🔄 How the Deployment Works (GitHub Actions)**  
+- A **GitHub Actions workflow (`deploy.yml`)** handles the build and deployment process automatically.  
+- Each time changes are pushed to the **main branch**, the site is rebuilt and deployed.  
+- The action **compiles the Astro project and updates GitHub Pages** automatically.  
 
-### Validator Testing
+---
 
-#### HTML
+## **📥 Forking the Repository**  
 
-All pages have passed without error through the [W3 HTML Validator](https://validator.w3.org/)
+By **forking** the repository, you create a **copy** of the project in your own GitHub account to experiment with or modify the project without affecting the original.  
 
-![html validator passed](read-me/testing/html-valid.png)
+### **Steps to Fork the Repository:**  
+1. Log in to **GitHub** and navigate to the **[Davmar House Repository](https://github.com/CraigSykes119/Davmar_House_Project)**.  
+2. Click the **"Fork"** button (top-right corner of the page).  
+3. This creates a **duplicate repository** under your GitHub account.  
+4. You can now **make changes independently** without modifying the original repository.  
 
-#### CSS
+---
 
-CSS Stylesheet passed without any errors through the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/)
+## **💻 Cloning the Repository Locally**  
 
-![css validator passed](read-me/testing/css-valid.png)
+To work on the project locally, follow these steps to **clone** the repository:  
 
-#### Lighthouse Testing
+1. Log in to **GitHub** and navigate to the **[Davmar House Repository](https://github.com/CraigSykes119/Davmar_House_Project)**.  
+2. Click on the **"Code"** button.  
+3. Copy the **HTTPS clone link** (or use SSH if configured).  
+4. Open **Git Bash / Terminal** and navigate to the folder where you want to store the project.  
+5. Run the following command to clone the repository:  
+   git clone https://github.com/CraigSykes119/Davmar_House_Project.git
+6. Once cloned, navigate into the project directory: cd Davmar_House_Project
+7. Install dependencies: npm install
+8. Start the development server to preview the website locally: npm run dev
 
-All pages passed through the lighthouse test and received scores of 90 or higher.
+## 🧪 Testing  
 
-- [Lighthouse test for Home page](read-me/testing/lighthouse-homepage.png)
-- [Lighthouse test for Gallery page](read-me/testing/lighthouse-gallery.png)
-- [Lighthouse test for Contact Me page](read-me/testing/lighthouse-contact-me.png)
+The **Davmar House** website was thoroughly tested across multiple **browsers, devices, and validation tools** to ensure functionality, responsiveness, and performance.
+
+---
+
+### **🌍 Cross-Browser Testing**  
+The site was tested successfully on the following **major web browsers**:  
+- ✅ **Google Chrome**  
+- ✅ **Microsoft Edge**  
+- ✅ **Safari**  
+
+✅ **Result:** No significant differences or layout issues detected across browsers.
+
+---
+
+### **📱 Cross-Device Testing**  
+Using **Google Developer Tools** and real devices, the website was tested on various screen sizes:  
+
+- 📱 **[Galaxy Z Fold 5](read-me/testing/test-galaxy-fold.png)**  
+- 📱 **[iPad Air](read-me/testing/test-pad-air.png)**  
+- 💻 **[My personal laptop](read-me/testing/test-personal-laptop.png)**  
+
+✅ **Result:** The site remains **fully responsive**, with no broken layouts or misalignment issues.
+
+---
+
+## **🛠️ Manual Testing**  
+
+The following **core functionalities** were manually tested:
+
+### ✅ **Navigation**
+- **Navbar links** correctly redirect users to the respective sections/pages.
+- **Active page indicator** updates based on user location.
+- **Burger menu functions correctly** on mobile devices.
+
+### ✅ **Footer**
+- **Social media icons** are interactive and open correct external links.
+- **Footer content remains responsive** and does not overlap on small screens.
+
+### ✅ **Forms & Interactive Elements**
+- **Contact form**
+  - Fields are required before submission.
+  - Validation errors appear if incorrect input is provided.
+  - Successful submission redirects correctly.
+
+- **Weather Widget**
+  - Retrieves and displays **real-time weather data** from OpenWeatherMap.
+  - Correct **temperature and weather condition icons** appear.
+  
+- **Google Maps API**
+  - Map loads and pins **Davmar House’s location** accurately.
+
+✅ **Result:** All features work **as expected**, with no major issues.
+
+---
+
+## **📜 Validator Testing**  
+
+### ✅ **HTML Validation**  
+All pages have passed without errors through the [W3 HTML Validator](https://validator.w3.org/).  
+
+![HTML Validator Passed](read-me/testing/html-home-valid.png)
+![HTML Validator Passed](read-me/testing/html-gallery-valid.png) 
+![HTML Validator Passed](read-me/testing/html-contact-valid.png) 
+![HTML Validator Passed](read-me/testing/html-nearby-valid.png) 
+![HTML Validator Passed](read-me/testing/html-rooms-valid.png)  
+
+### ✅ **CSS Validation**  
+The CSS stylesheet passed **without errors** through the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/).  
+
+![CSS Validator Passed](read-me/testing/css-valid.png)  
+
+---
+
+## **🚀 Lighthouse Testing (Performance & SEO)**  
+
+The website was tested using **Google Lighthouse** for **performance, accessibility, and SEO optimization**.  
+
+✅ **Results:**  
+- **Performance:** **90+** across pages.  
+- **Accessibility:** **100%** across all pages.  
+- **Best Practices:** **90+** across all pages.  
+- **SEO:** **Achieved an optimal score of 90+** after implementing recommended improvements.
+
+- **[Lighthouse test for Home page](read-me/testing/lighthouse-homepage.png)**  
+- **[Lighthouse test for Gallery page](read-me/testing/lighthouse-gallery.png)**  
+- **[Lighthouse test for Contact Me page](read-me/testing/lighthouse-contact-me.png)**  
+
+---
+
+## **♿ Accessibility Testing**  
+The site was tested for **compliance with WCAG 2.1 accessibility standards**:  
+
+✅ **Implemented Features:**  
+- **Semantic HTML elements** for a meaningful structure.  
+- **Alt text on all images** for screen readers.  
+- **Sufficient color contrast** for readability.  
+- **ARIA labels** for social icons and interactive elements.  
+- **Keyboard navigation fully functional** (users can navigate the site without a mouse).  
+
+✅ **Result:** The website **meets accessibility best practices** and ensures **an inclusive user experience**.
+
+---
+
+### **✅ Final Testing Summary**  
+All pages and features were tested, validated, and optimized for:  
+- ✅ **Responsiveness** across devices.  
+- ✅ **Functionality & Interactivity** (Forms, APIs, Navigation).  
+- ✅ **Performance & SEO Optimization**.  
+- ✅ **Accessibility & Compliance with WCAG 2.1**.  
+
+🚀 **Davmar House is fully functional and ready for deployment!**  
+
 
 ### Bugs
 
